@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=SnakeBody
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ SnakeBody\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=bodyPosition
+comment1.target=SnakeBody(int)
+comment1.text=\r\n\ SnakeBody\ constructor\r\n\ sets\ the\ image\ for\ the\ snakeBody\r\n\ @param\ int\ bodyPosition\r\n
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\r\n\ Act\ -\ do\ whatever\ the\ SnakeBody\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment3.params=
+comment3.target=void\ moveBody()
+comment3.text=\r\n\ moveBody\r\n\ moves\ the\ snake\ body\ \r\n
+numComments=4
