@@ -1,10 +1,10 @@
-#Week 1
+# Week 1
 
-##Done
+## Done
 
-*Explored, brain stormed the new version of Snake game
-*Analyzed design patterns to be used to implement the game
+* Explored, brain stormed the new version of Snake game
+* Analyzed design patterns to be used to implement the game
 
-##To Do
+## To Do
 
-*Implement observer pattern components of the code
+* Implement observer pattern components of the code
