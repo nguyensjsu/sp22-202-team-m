@@ -1,1 +1,14 @@
 ### Ankita Jaswal - Individual Weekly Journal
+
+### Week 1
+1. What tasks did I work on / complete?
+   1. Committed working source code to team repo
+   2. Researched greenfoot to brainstorm features to add
+   3. Brainstormed features with team
+2. What am I planning to work on next?
+   1. Refactor src code to implemented State Design Pattern
+   2. Implement Score Observer Pattern for State Pattern
+3. What tasks are blocked waiting on another team member?
+   1. Add additional observers, if time allotted to the states, but need to implement patterns first
+4. Communication
+    * The team and I are able to collaborate on weekly tasks via stand-up meetings and whatsapp to stay on track in completing the feature set. 
