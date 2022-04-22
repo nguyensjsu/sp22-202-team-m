@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=EndGame
+comment1.params=
+comment1.target=void\ setText()
+comment2.params=
+comment2.target=EndGame()
+comment3.params=p\ distance
+comment3.target=int\ ShiftSouth(int,\ int)
+comment3.text=\r\n\ ShiftSouth\ -shifts\ the\ coordnates\ down\ by\ the\ distance\ handed\ to\ it\r\n\ @param\ int\ p\r\n\ @param\ int\ distance\r\n
+comment4.params=p\ distance
+comment4.target=int\ ShiftEast(int,\ int)
+comment4.text=\r\n\ ShiftEast\ -\ shifts\ the\ coordinates\ right\ by\ the\ distance\ handed\ to\ it\r\n\ @param\ int\ p\r\n\ @param\ int\ distance\r\n
+numComments=5
