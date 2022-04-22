@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=ILevelState
+comment0.text=\r\n\ The\ Interface\ ILevelState.\r\n
+comment1.params=
+comment1.target=void\ changeState()
+comment1.text=\r\n\ Change\ state.\r\n
+comment2.params=
+comment2.target=int\ getSpeed()
+numComments=3
