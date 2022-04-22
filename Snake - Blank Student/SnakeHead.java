@@ -21,9 +21,11 @@ public class SnakeHead  extends Actor
     public SnakeHead(int bodyPosition )
     {
         GreenfootImage image = new GreenfootImage(10, 10);
-        image.setColor(Color.BLUE);
-        image.fillRect(0, 0, 10, 10);
-        setImage(image);
+        //image.setColor(Color.BLUE);
+        //image.fillRect(0, 0, 10, 10);
+        setImage(new GreenfootImage("snake.png"));
+        //setImage(image);
+        getImage().scale(20,20);
     }
 
     /**
