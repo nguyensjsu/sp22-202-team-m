@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Level2
+comment0.text=\r\n\ The\ Class\ Level2\ implements\ Level\ State\ to\ create\ a\ new\ level\ 2\r\n
+comment1.params=l
+comment1.target=Level2(LevelState)
+comment1.text=\r\n\ Creates\ Level\ 2\r\n\r\n\ @param\ l\r\n
+comment2.params=
+comment2.target=void\ changeState()
+comment2.text=\r\n\ Change\ state.\r\n
+comment3.params=
+comment3.target=int\ getSpeed()
+comment3.text=\r\n\ Gets\ the\ current\ speed.\r\n\r\n\ @return\ the\ level\ speed\r\n
+numComments=4
