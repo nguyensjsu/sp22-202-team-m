@@ -7,14 +7,13 @@ import java.awt.*;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class SnakeWorld extends World
+public class SnakeWorld extends World implements ILevelObserver
 {
+    //food creation variables
     public static final int DOT_SIZE = 10;
-    public static final int MAX_DOTS = (600*400)/(DOT_SIZE*DOT_SIZE);
+    public static final int MAX_DOTS = (200*100)/(DOT_SIZE*DOT_SIZE);
     private int snakeSize=4;
     private Point snakeCoords[] = new Point[MAX_DOTS];
-    //private int x[] = new int[MAX_DOTS];
-    //private int y[] = new int[MAX_DOTS];
     int dX=1, dY=0;
 
     //Direction variables
@@ -22,9 +21,20 @@ public class SnakeWorld extends World
     private int directionX = SPEED;
     private int directionY;
 
-    private Score score = new Score();
-
+    //Level State Machine variable
+    LevelState state;
+    
+    //Score variable
+    Score score;
+    
+    //Endgame variable
+    EndGame endgame;
+    
+    //intial speed variable
     private int speed = 30;
+    
+    //value variable
+    private static int value=0;
     
     /**
      * Constructor for objects of class SnakeWorld.
@@ -38,8 +48,23 @@ public class SnakeWorld extends World
         drawSnake();
         placeFood(1);
         addObject(new WorldOutline(), 30, 20);
-        addObject(score, 6, 2);
+        
         Greenfoot.setSpeed(speed);
+        
+        
+       state = new LevelState();
+       score = new Score();
+       state.changeToLevel1();
+       score.attachObserver(state);
+       addObject(score, 6, 2);
+       
+    }
+    
+    /**
+     * Level State Machine instance
+     */
+    public LevelState getState(){
+        return state;
     }
 
     /**
@@ -82,7 +107,7 @@ public class SnakeWorld extends World
     {
         for (int i = 0; i < amountOfFood; i++)
         {
-            addObject(new Food(), Greenfoot.getRandomNumber(59)+1,  Greenfoot.getRandomNumber(39)+1);
+            addObject(new Food(), Greenfoot.getRandomNumber(29)+1,  Greenfoot.getRandomNumber(19)+1);
         }
     }
 
@@ -102,17 +127,30 @@ public class SnakeWorld extends World
     /**
      * addTail
      * adds another tail to the end of the snake
+     * Do not change value, needs to be set after setting new score.
+     * After incrementing value, instanciate new object for end game @ certain score
      */
     public void addTail()
     {
         snakeCoords[snakeSize] = new Point(snakeCoords[snakeSize-1].getX(), snakeCoords[snakeSize-1].getY());
         addObject(new SnakeBody(snakeSize), snakeCoords[snakeSize].getX(), snakeCoords[snakeSize].getY());
         snakeSize++;
-        score.updateScore();
+        score.updateScore(state.getState());
+        value = score.getScore();
+        //add new end game instance
+        if(value==30){
+            endGame();
+        }
         speed++;
         Greenfoot.setSpeed(speed);
     }
-
+    
+    //not used
+    public static int getValue(){
+        return value;
+     }
+     
+     
     /**
      * keyPress
      * changes the direction of the snake based upon key presses
@@ -159,6 +197,18 @@ public class SnakeWorld extends World
         addObject(new GameOver(), getWidth() / 2, getHeight() / 2);
         Greenfoot.stop();
     }
+    
+     /**
+     * endGame - ends the game
+      */
+    public void endGame()
+    {
+            addObject(new EndGame(), getWidth() / 2,getHeight() / 2);
+            Greenfoot.stop();
+    }
+    
+    
+   
 
     /**
      * hitEdge - game over if you hit the side of the world
@@ -177,6 +227,11 @@ public class SnakeWorld extends World
         updateCoords();
         
         hitEdge();
+    }
+    
+    public void update(int speed){
+        if(score.getScore() == 2 )
+        Greenfoot.setSpeed(20);
     }
 
 }
