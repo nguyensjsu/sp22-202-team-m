@@ -1,80 +1,96 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-import java.awt.*;
-import greenfoot.Color;
-import greenfoot.Font;
+import greenfoot.*;
 
 /**
- * Write a description of class Score here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * The Class Score is an Actor and implements ScoreObserver, when score changes, level state machine is notified and level is updated.
+ * Also used to update text displayed for score and level.
  */
-public class Score extends Actor
-{
-    Font font = new Font("Dialog", true,false, 20);
-    Color darkGreen = new Color(0, 51, 0);
-    Color green = new Color(0, 255, 0 , 150);
-    GreenfootImage image = new GreenfootImage(100, 30);
+public class Score extends Actor implements IScoreSubject {
+
     private int score = 0;
-
+    private IScoreObserver observer;
+    private String level = "Level : 1";
+    
     /**
-     * Score - sets up the score object
+     * Set score and level text.
      */
-    public Score()
-    {
-        image.setFont(font);
-        setText();
+    public void setText() {
+        String text = "Score: " + score + " " + level;
+        GreenfootImage textImage = new GreenfootImage(text, 20, Color.GREEN, new Color(0, 0, 0, 0));
+        GreenfootImage image = new GreenfootImage(1600, 60);
+        image.drawImage(textImage, 750, 16);
         setImage(image);
     }
 
     /**
-     * setText - sets the text of the score
+     * Instantiates a new updated text display.
      */
-    private void setText()
-    {
-        image.clear();
-        image.setColor(green);
-
-        image.drawString("Score: " + score, ShiftSouth(1, 2), ShiftEast(15, 2));
-        image.setColor(darkGreen);
-
-        image.drawString("Score: " + score, 1, 15);
+    public Score() {
+        setText();
+    }
+    
+    /**
+     * returns updated score value
+     */
+    public int getScore(){
+        return score;    
+    }
+    
+    /**
+     * Act.
+     */
+    public void act() {
 
     }
 
     /**
-     * updateScore - adds score then runs setText
+     * Updates score then sets text to display
+     * 
+     * @param level ->level class name
      */
-    public void updateScore()
-    {
+    public void updateScore(String level) {
         score++;
+        
+        StringBuilder temp = new StringBuilder(level);
+        temp.insert(temp.length()-1, " : ");
+        temp.append(" ");
+        this.level = temp.toString();
+        
+        
         setText();
-        setImage(image);
+        
+        if (score%5==0) {
+            notifyLevelState();
+        }
     }
 
     /**
-     * ShiftSouth - shifts the coordinates down by the distance handed to it
-     * @param int p
-     * @param int distance
+     * attach observer.
+     *
+     * @param obj -> attached observers
      */
-    public int ShiftSouth(int p, int distance) {
-        return (p + distance);
-    }
+    @Override
+    public void attachObserver(IScoreObserver obj) {
+        this.observer = obj;
 
+    }
+    
     /**
-     * ShiftEast - shifts the coordinates down by the distance handed to it
-     * @param int p
-     * @param int distance
+     * remove observer.
+     *
+     * @param obj
      */
-    public int ShiftEast(int p, int distance) {
-        return (p + distance);
+    public void removeObserver( IScoreObserver obj ){
+        this.observer = null;
     }
-
-    public void setSpeed()
-    {
-        if(score>20)
-        {
-           Greenfoot.setSpeed(30);
+    
+    /**
+     * Notify Level State.
+     * notifies observers of current score to change level state
+     */
+    @Override
+    public void notifyLevelState() {
+        if(this.observer != null){
+            this.observer.changeState(score);
         }
     }
 }
