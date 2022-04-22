@@ -22,7 +22,7 @@ public class SnakeBody  extends Actor
     public SnakeBody(int bodyPosition)
     {
         GreenfootImage image = new GreenfootImage(10, 10);
-        image.setColor(Color.GRAY);
+        image.setColor(Color.BLUE);
         image.fillRect(0, 0, 10, 10);
         setImage(image);
         bodyPos = bodyPosition;
