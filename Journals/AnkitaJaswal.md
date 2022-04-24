@@ -12,3 +12,18 @@
    1. Add additional observers, if time allotted to the states, but need to implement patterns first
 4. Communication
     * The team and I are able to collaborate on weekly tasks via stand-up meetings and whatsapp to stay on track in completing the feature set. 
+
+
+### Week 2
+1. What tasks did I work on / complete?
+   1. completed change level depending on score task
+   2. added end game feature to display "You Win"
+
+2. What am I planning to work on next?
+   1. Pair with Maitreyi 
+   2. Find video editing tools for user story ad
+
+3. What tasks are blocked waiting on another team member?
+   1. Add additional observers, if time allotted to the states, but need to implement patterns first
+4. Communication
+   * The team and I are able to collaborate on weekly tasks via stand-up meetings and whatsapp to stay on track in completing the feature set. 
