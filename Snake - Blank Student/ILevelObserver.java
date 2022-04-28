@@ -12,6 +12,6 @@ public interface ILevelObserver
      * update speed each level
      * @param speed the speed
      */
-    public void update(int speed);
+    public void update(int speed, int level);
 }
 

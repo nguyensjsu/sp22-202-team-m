@@ -14,6 +14,20 @@ public class SnakeBody  extends Actor
     private int bodyPos;
     private Point snakeCoords;
     
+    // body
+    private GreenfootImage horizontal;
+    //private GreenfootImage vertical;
+    //private GreenfootImage topLeft;
+    //private GreenfootImage topRight;
+    //private GreenfootImage bottomLeft;
+    //private GreenfootImage bottomRight;
+    
+    // tail
+    private GreenfootImage up;
+    private GreenfootImage down;
+    private GreenfootImage left;
+    private GreenfootImage right;
+    
     /**
      * SnakeBody constructor
      * sets the image for the snakeBody
@@ -21,10 +35,25 @@ public class SnakeBody  extends Actor
      */
     public SnakeBody(int bodyPosition)
     {
-        GreenfootImage image = new GreenfootImage(10, 10);
-        image.setColor(Color.BLUE);
-        image.fillRect(0, 0, 10, 10);
-        setImage(image);
+        horizontal = new GreenfootImage("body_horizontal.png");
+        //vertical = new GreenfootImage("body_vertical.png");
+        //topLeft = new GreenfootImage("body_topleft.png");
+        //topRight = new GreenfootImage("body_topright.png");
+        //bottomLeft = new GreenfootImage("body_bottomleft.png");
+        //bottomRight = new GreenfootImage("body_bottomright.png");
+        up = new GreenfootImage("tail_up.png");
+        down = new GreenfootImage("tail_down.png");
+        left = new GreenfootImage("tail_left.png");
+        right = new GreenfootImage("tail_right.png");
+        
+        horizontal.scale(16,16);
+        up.scale(16,16);
+        down.scale(16,16);
+        left.scale(16,16);
+        right.scale(16,16);
+        
+        setImage(horizontal);     
+        
         bodyPos = bodyPosition;
     }
 
@@ -45,6 +74,21 @@ public class SnakeBody  extends Actor
     {
       SnakeWorld world = (SnakeWorld)getWorld();
       snakeCoords = world.getBodyPosition(bodyPos);
+      // body behind & in front of current coords
+      Point behind = world.getBodyPosition(bodyPos+1);
+      Point front = world.getBodyPosition(bodyPos-1);
+      
+      // check if tail
+      if (behind == null) {
+        if      (getX() > front.getX()) setImage(right);
+        else if (getX() < front.getX()) setImage(left);
+        else if (getY() < front.getY()) setImage(up);
+        else if (getY() > front.getY()) setImage(down);  
+      } else {
+        // only use horizontal image for now
+        setImage(horizontal);
+      }      
+      
       setLocation(snakeCoords.getX(), snakeCoords.getY());
     }
 }

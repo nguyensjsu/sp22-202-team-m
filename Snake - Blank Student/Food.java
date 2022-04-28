@@ -17,9 +17,8 @@ public class Food  extends Actor
      */
     public Food()
     {
-        GreenfootImage image = new GreenfootImage(10, 10);
-        image.setColor(Color.RED);
-        image.fillRect(0, 0, 10, 10);
+        GreenfootImage image = new GreenfootImage("apple.png");
+        //image.scale(20,20);
         setImage(image);
     }
 

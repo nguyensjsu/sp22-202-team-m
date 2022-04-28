@@ -15,7 +15,9 @@ public class SnakeWorld extends World implements ILevelObserver
     private int snakeSize=4;
     private Point snakeCoords[] = new Point[MAX_DOTS];
     int dX=1, dY=0;
-
+    
+    private String[] backgroundPaths = new String[] { "grass.jpg", "ground.jpg", "wood.jpg", "bricks.jpg", "grass-night.jpg" };
+    
     //Direction variables
     private final int SPEED = 1;
     private int directionX = SPEED;
@@ -44,6 +46,9 @@ public class SnakeWorld extends World implements ILevelObserver
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(61, 41, 10);
+        
+        setBackground(new GreenfootImage(backgroundPaths[0]));
+        
         setUpCoords();
         drawSnake();
         placeFood(1);
@@ -52,11 +57,15 @@ public class SnakeWorld extends World implements ILevelObserver
         Greenfoot.setSpeed(speed);
         
         
-       state = new LevelState();
-       score = new Score();
-       state.changeToLevel1();
-       score.attachObserver(state);
-       addObject(score, 6, 2);
+        state = new LevelState();
+        state.attach(this); // world listen to level state
+        state.changeToLevel1();
+       
+        score = new Score();
+        score.attachObserver(state);
+        addObject(score, 6, 2);
+       
+       
        
     }
     
@@ -141,8 +150,6 @@ public class SnakeWorld extends World implements ILevelObserver
         if(value==30){
             endGame();
         }
-        speed++;
-        Greenfoot.setSpeed(speed);
     }
     
     //not used
@@ -186,7 +193,10 @@ public class SnakeWorld extends World implements ILevelObserver
      */ 
     public Point getBodyPosition(int bodyPosition)
     {
-        return snakeCoords[bodyPosition];
+        if (bodyPosition>=0 && bodyPosition<snakeCoords.length)
+            return snakeCoords[bodyPosition];
+        else
+            return null;
     }
 
     /**
@@ -229,9 +239,9 @@ public class SnakeWorld extends World implements ILevelObserver
         hitEdge();
     }
     
-    public void update(int speed){
-        if(score.getScore() == 2 )
-        Greenfoot.setSpeed(20);
+    public void update(int speed, int level){
+        setBackground(new GreenfootImage(backgroundPaths[level-1]));
+        Greenfoot.setSpeed(speed);
     }
 
 }

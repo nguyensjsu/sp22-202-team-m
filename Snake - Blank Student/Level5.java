@@ -15,7 +15,7 @@ public class Level5 implements ILevelState {
      */
     public Level5(LevelState l) {
         
-        this.speed = 40;
+        this.speed = 50;
         this.l = l;
     }
 

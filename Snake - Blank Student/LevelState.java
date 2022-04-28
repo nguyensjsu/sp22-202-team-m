@@ -57,6 +57,7 @@ public class LevelState implements IScoreObserver, ILevelSubject {
      */
     public void changeToLevel1() {
         this.current = level1;
+        this.level = 1;
         notifyObservers(current.getSpeed());
     }
 
@@ -65,6 +66,7 @@ public class LevelState implements IScoreObserver, ILevelSubject {
      */
     public void changeToLevel2() {
         this.current = level2;
+        this.level = 2;
         notifyObservers(current.getSpeed());
 
     }
@@ -74,6 +76,7 @@ public class LevelState implements IScoreObserver, ILevelSubject {
      */
     public void changeToLevel3() {
         this.current = level3;
+        this.level = 3;
         notifyObservers(current.getSpeed());
 
     }
@@ -83,6 +86,7 @@ public class LevelState implements IScoreObserver, ILevelSubject {
      */
     public void changeToLevel4() {
         this.current = level4;
+        this.level = 4;
         notifyObservers(current.getSpeed());
 
     }
@@ -92,6 +96,7 @@ public class LevelState implements IScoreObserver, ILevelSubject {
      */
     public void changeToLevel5() {
         this.current = level5;
+        this.level = 5;
         notifyObservers(current.getSpeed());
 
     }
@@ -129,7 +134,7 @@ public class LevelState implements IScoreObserver, ILevelSubject {
      */
     public void notifyObservers(int speed) {
         for (ILevelObserver ob : observers) {
-            ob.update(speed);
+            ob.update(speed, level);
         }
     }
     
