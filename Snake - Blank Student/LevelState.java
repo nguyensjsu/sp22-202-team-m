@@ -1,21 +1,21 @@
-import java.util.*;
-import greenfoot.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Write a description of class LevelState here.
  */
 public class LevelState implements IScoreObserver, ILevelSubject {
-    
+
     ILevelState level1;
     ILevelState level2;
     ILevelState level3;
     ILevelState level4;
     ILevelState level5;
     ILevelState current;
-    
+
     public int speed;
     public int level;
-    
+
     List<ILevelObserver> observers;
 
     /**
@@ -28,7 +28,7 @@ public class LevelState implements IScoreObserver, ILevelSubject {
         level3 = new Level3(this);
         level4 = new Level4(this);
         level5 = new Level5(this);
-        observers = new ArrayList<ILevelObserver>();
+        observers = new ArrayList<>();
     }
 
     /**
@@ -47,11 +47,10 @@ public class LevelState implements IScoreObserver, ILevelSubject {
      * @return state name
      */
     public String getState() {
-        String name = current.getClass().getName();
-        return name;
+        return current.getClass().getName();
     }
 
-  
+
     /**
      * Change to level 1.
      */
@@ -77,7 +76,7 @@ public class LevelState implements IScoreObserver, ILevelSubject {
         notifyObservers(current.getSpeed());
 
     }
-    
+
     /**
      * Change to level 4.
      */
@@ -86,7 +85,7 @@ public class LevelState implements IScoreObserver, ILevelSubject {
         notifyObservers(current.getSpeed());
 
     }
-    
+
     /**
      * Change to level 5.
      */
@@ -95,13 +94,13 @@ public class LevelState implements IScoreObserver, ILevelSubject {
         notifyObservers(current.getSpeed());
 
     }
-    
+
     /**
      * End game.
      */
     public void endGame() {
-          //do nothing infinite - taking care of end game in world
-       
+        //do nothing infinite - taking care of end game in world
+
     }
 
     /**
@@ -112,7 +111,7 @@ public class LevelState implements IScoreObserver, ILevelSubject {
     public void attach(ILevelObserver ob) {
         observers.add(ob);
     }
-    
+
 
     /**
      * Remove Observer.
@@ -125,6 +124,7 @@ public class LevelState implements IScoreObserver, ILevelSubject {
 
     /**
      * Notify observers.
+     *
      * @param speed
      */
     public void notifyObservers(int speed) {
@@ -132,6 +132,6 @@ public class LevelState implements IScoreObserver, ILevelSubject {
             ob.update(speed);
         }
     }
-    
+
 }
 

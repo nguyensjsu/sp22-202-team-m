@@ -1,11 +1,11 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-import java.awt.*;
+import greenfoot.Actor;
 import greenfoot.Color;
+import greenfoot.GreenfootImage;
 
 /**
  * Write a description of class Food here.
- * 
- * @author (your name) 
+ *
+ * @author (your name)
  * @version (a version number or a date)
  */
 public class Food  extends Actor
@@ -18,7 +18,7 @@ public class Food  extends Actor
     public Food()
     {
         GreenfootImage image = new GreenfootImage(10, 10);
-        image.setColor(Color.RED);
+        image.setColor(Color.GREEN);
         image.fillRect(0, 0, 10, 10);
         setImage(image);
     }
