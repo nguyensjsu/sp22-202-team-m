@@ -6,33 +6,30 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name)
  * @version (a version number or a date)
  */
-public class SnakeHead  extends Actor
-{
-    private int bodyPos;
-    private Point snakeCoords;
-    private int temp = 0;
+public class SnakeHead  extends Actor {
+//    private int bodyPos;
+//    private int temp = 0;
 
     /**
      * SnakeHead Constructor
      * Sets the image for snakeHead
+     *
      * @param int bodyPosition
      */
-    public SnakeHead(int bodyPosition )
-    {
+    public SnakeHead(int bodyPosition) {
         GreenfootImage image = new GreenfootImage(10, 10);
         //image.setColor(Color.BLUE);
         //image.fillRect(0, 0, 10, 10);
         setImage(new GreenfootImage("snake.png"));
         //setImage(image);
-        getImage().scale(20,20);
+        getImage().scale(20, 20);
     }
 
     /**
      * Act - do whatever the SnakeHead wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public void act()
-    {
+    public void act() {
         moveHead();
         lookForFood();
         hitBody();
@@ -43,10 +40,9 @@ public class SnakeHead  extends Actor
      * moveHead
      * moves the head to the next position on the screen
      */
-    public void moveHead()
-    {
-        SnakeWorld world = (SnakeWorld)getWorld();
-        snakeCoords = world.getBodyPosition(0);
+    public void moveHead() {
+        SnakeWorld world = (SnakeWorld) getWorld();
+        Point snakeCoords = world.getBodyPosition(0);
         setLocation(snakeCoords.getX(), snakeCoords.getY());
 
     }
@@ -55,11 +51,11 @@ public class SnakeHead  extends Actor
      * growTail
      * adds a tail segment to the snake and adds new food to the world
      */
-    public void growTail()
-    {
-        SnakeWorld world = (SnakeWorld)getWorld();
+    public void growTail() {
+        SnakeWorld world = (SnakeWorld) getWorld();
         world.addTail();
         world.placeFood(1);
+        world.placeObstacles(1);
     }
 
     /**
@@ -67,10 +63,8 @@ public class SnakeHead  extends Actor
      * Looks for food.
      * If the snake finds food it eats the food
      */
-    public void lookForFood()
-    {
-        if (canSee(Food.class))
-        {
+    public void lookForFood() {
+        if (canSee(Food.class)) {
             eat(Food.class);
             growTail();
         }
@@ -79,20 +73,16 @@ public class SnakeHead  extends Actor
     /**
      * hitBody - checks whether the snake tries to eat it's own body
      */
-    public void hitBody()
-    {
-        SnakeWorld world = (SnakeWorld)getWorld();
-        if(canSee(SnakeBody.class))
-        {
+    public void hitBody() {
+        SnakeWorld world = (SnakeWorld) getWorld();
+        if (canSee(SnakeBody.class)) {
             world.die();
         }
     }
 
-    public void hitObstacle()
-    {
-        SnakeWorld world = (SnakeWorld)getWorld();
-        if(canSee(Obstacle.class))
-        {
+    public void hitObstacle() {
+        SnakeWorld world = (SnakeWorld) getWorld();
+        if (canSee(Obstacle.class)) {
             world.die();
         }
     }
@@ -100,10 +90,10 @@ public class SnakeHead  extends Actor
     /**
      * canSee
      * looks for other objects the intersect with the snake
+     *
      * @param Class clss
      */
-    public boolean canSee(Class a)
-    {
+    public boolean canSee(Class a) {
         Actor actor = getOneObjectAtOffset(0, 0, a);
         return actor != null;
     }
@@ -111,13 +101,12 @@ public class SnakeHead  extends Actor
     /**
      * eat
      * eats the object and removes it from the screen
+     *
      * @param Class clss
      */
-    public void eat(Class clss)
-    {
+    public void eat(Class clss) {
         Actor actor = getOneObjectAtOffset(0, 0, clss);
-        if(actor != null)
-        {
+        if (actor != null) {
             getWorld().removeObject(actor);
         }
     }

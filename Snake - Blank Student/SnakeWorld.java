@@ -44,6 +44,7 @@ public class SnakeWorld extends World implements ILevelObserver {
         setUpCoords();
         drawSnake();
         placeFood(1);
+        placeObstacles(1);
         addObject(new WorldOutline(), 30, 20);
         Greenfoot.setSpeed(speed);
 
@@ -101,6 +102,19 @@ public class SnakeWorld extends World implements ILevelObserver {
             addObject(new Food(), Greenfoot.getRandomNumber(29) + 1, Greenfoot.getRandomNumber(19) + 1);
         }
     }
+
+    /**
+     * placeFood
+     * Place a set amount of food in the game window
+     *
+     * @param int amountOfFood
+     */
+    public void placeObstacles(int amountOfObstacles) {
+        for (int i = 0; i < amountOfObstacles; i++) {
+            addObject(new Obstacle(), Greenfoot.getRandomNumber(29) + 1, Greenfoot.getRandomNumber(19) + 1);
+        }
+    }
+
 
     /**
      * setUpCoords
