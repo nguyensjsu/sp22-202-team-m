@@ -65,6 +65,7 @@ public class SnakeHead  extends Actor {
      */
     public void lookForFood() {
         if (canSee(Food.class)) {
+            Greenfoot.playSound("eat.wav");
             eat(Food.class);
             growTail();
         }

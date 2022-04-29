@@ -103,7 +103,7 @@ public class SnakeWorld extends World implements ILevelObserver {
      */
     public void placeFood(int amountOfFood) {
         for (int i = 0; i < amountOfFood; i++) {
-            addObject(new Food(), Greenfoot.getRandomNumber(worldWidth) + 1, Greenfoot.getRandomNumber(worldHeight) + 1);
+            addObject(new Food(), Greenfoot.getRandomNumber(worldWidth), Greenfoot.getRandomNumber(worldHeight));
         }
     }
 
@@ -115,7 +115,7 @@ public class SnakeWorld extends World implements ILevelObserver {
      */
     public void placeObstacles(int amountOfObstacles) {
         for (int i = 0; i < amountOfObstacles; i++) {
-            addObject(new Obstacle(), Greenfoot.getRandomNumber(worldWidth) + 1, Greenfoot.getRandomNumber(worldHeight) + 1);
+            addObject(new Obstacle(), Greenfoot.getRandomNumber(worldWidth), Greenfoot.getRandomNumber(worldHeight));
         }
     }
 
