@@ -1,10 +1,9 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-import java.awt.*;
-import greenfoot.Color;
+
 /**
  * Write a description of class SnakeHead here.
-//  * 
- * @author (your name) 
+//  *
+ * @author (your name)
  * @version (a version number or a date)
  */
 public class SnakeHead  extends Actor
@@ -32,12 +31,13 @@ public class SnakeHead  extends Actor
      * Act - do whatever the SnakeHead wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public void act() 
+    public void act()
     {
         moveHead();
         lookForFood();
         hitBody();
-    }   
+        hitObstacle();
+    }
 
     /**
      * moveHead
@@ -65,13 +65,13 @@ public class SnakeHead  extends Actor
     /**
      * lookForFood
      * Looks for food.
-     * If the snake finds food it eats the food 
+     * If the snake finds food it eats the food
      */
     public void lookForFood()
     {
         if (canSee(Food.class))
         {
-            eat(Food.class); 
+            eat(Food.class);
             growTail();
         }
     }
@@ -88,6 +88,15 @@ public class SnakeHead  extends Actor
         }
     }
 
+    public void hitObstacle()
+    {
+        SnakeWorld world = (SnakeWorld)getWorld();
+        if(canSee(Obstacle.class))
+        {
+            world.die();
+        }
+    }
+
     /**
      * canSee
      * looks for other objects the intersect with the snake
@@ -96,7 +105,7 @@ public class SnakeHead  extends Actor
     public boolean canSee(Class a)
     {
         Actor actor = getOneObjectAtOffset(0, 0, a);
-        return actor != null;        
+        return actor != null;
     }
 
     /**
