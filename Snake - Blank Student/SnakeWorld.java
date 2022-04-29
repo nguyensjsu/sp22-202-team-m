@@ -195,6 +195,7 @@ public class SnakeWorld extends World implements ILevelObserver {
      * die - ends the game
      */
     public void die() {
+        Greenfoot.playSound("GameOver.wav");
         addObject(new GameOver(), getWidth() / 2, getHeight() / 2);
         Greenfoot.stop();
     }
