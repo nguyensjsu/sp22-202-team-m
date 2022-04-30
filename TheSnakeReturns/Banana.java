@@ -17,9 +17,7 @@ public class Banana extends Food
      * Instantiates a new banana.
      */
     public Banana(){
-        GreenfootImage image = new GreenfootImage("banana.png");
-        image.scale(20, 20);
-        setImage(image);  
+        super("banana.png");  
     }
     
     /**
