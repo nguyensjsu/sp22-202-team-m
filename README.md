@@ -13,12 +13,12 @@ High Level Plannng, Feature Breakdown
 3. As the game progresses and levels up, more obstacles and food options could be added by creating more classes implementing the same parent factory classes
 4. In this way a common behaviour could be specified in the factory classes for future derive classes to be created
 
-![https://github.com/nguyensjsu/sp22-202-team-m/blob/main/Images/ClassDiagram_FactoryDesignPattern.png](ClassDiagram_FactoryDesignPattern.png)
+![alt text](https://github.com/nguyensjsu/sp22-202-team-m/blob/main/Images/ClassDiagram_FactoryDesignPattern.png](ClassDiagram_FactoryDesignPattern.png?raw=true)
 
 *State Pattern*
 
-![https://github.com/nguyensjsu/sp22-202-team-m/blob/main/Images/ClassDiagram_StateDesignPattern.png](ClassDiagram_StateDesignPattern.png)
+![alt text](https://github.com/nguyensjsu/sp22-202-team-m/blob/main/Images/ClassDiagram_StateDesignPattern.png](ClassDiagram_StateDesignPattern.png?raw=true)
 
 *Observer Pattern*
 
-![https://github.com/nguyensjsu/sp22-202-team-m/blob/main/Images/ClassDiagram_ObserverDesignPattern.png](ClassDiagram_ObserverDesignPattern.png)
+![alt text](https://github.com/nguyensjsu/sp22-202-team-m/blob/main/Images/ClassDiagram_ObserverDesignPattern.png](ClassDiagram_ObserverDesignPattern.png?raw=true)
