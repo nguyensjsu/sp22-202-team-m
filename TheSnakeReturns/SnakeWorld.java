@@ -16,7 +16,7 @@ public class SnakeWorld extends World implements ILevelObserver {
     int dX = 1, dY = 0;
 
     Factory foodFactory;
-    
+    Factory obstacleFactory;
     //Direction variables
     private final int SPEED = 1;
     private int directionX = SPEED;
@@ -51,6 +51,7 @@ public class SnakeWorld extends World implements ILevelObserver {
         drawSnake();
         
         foodFactory = new FoodFactory();
+        obstacleFactory = new ObstacleFactory();
         placeFood(1);
 
         
@@ -121,7 +122,7 @@ public class SnakeWorld extends World implements ILevelObserver {
      */
     public void placeObstacles(int amountOfObstacles) {
         for (int i = 0; i < amountOfObstacles; i++) {
-            addObject(new Obstacle(), Greenfoot.getRandomNumber(worldWidth), Greenfoot.getRandomNumber(worldHeight));
+            addObject(obstacleFactory.sendItem(), Greenfoot.getRandomNumber(worldWidth), Greenfoot.getRandomNumber(worldHeight));
         }
     }
 
