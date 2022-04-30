@@ -10,6 +10,11 @@ public class SnakeHead  extends Actor {
 //    private int bodyPos;
 //    private int temp = 0;
 
+    private GreenfootImage up;
+    private GreenfootImage down;
+    private GreenfootImage left;
+    private GreenfootImage right;
+
     /**
      * SnakeHead Constructor
      * Sets the image for snakeHead
@@ -17,12 +22,17 @@ public class SnakeHead  extends Actor {
      * @param int bodyPosition
      */
     public SnakeHead(int bodyPosition) {
-        GreenfootImage image = new GreenfootImage(10, 10);
-        //image.setColor(Color.BLUE);
-        //image.fillRect(0, 0, 10, 10);
-        setImage(new GreenfootImage("snake.png"));
-        //setImage(image);
-        getImage().scale(20, 20);
+        up = new GreenfootImage("snake/head_up.png");
+        down = new GreenfootImage("snake/head_down.png");
+        left = new GreenfootImage("snake/head_left.png");
+        right = new GreenfootImage("snake/head_right.png");
+        
+        up.scale(20,20);
+        down.scale(20,20);
+        left.scale(20,20);
+        right.scale(20,20);
+        
+        setImage(right);
     }
 
     /**
@@ -43,8 +53,11 @@ public class SnakeHead  extends Actor {
     public void moveHead() {
         SnakeWorld world = (SnakeWorld) getWorld();
         Point snakeCoords = world.getBodyPosition(0);
+        if      (getX() > snakeCoords.getX()) setImage(left);
+        else if (getX() < snakeCoords.getX()) setImage(right);
+        else if (getY() < snakeCoords.getY()) setImage(down);
+        else if (getY() > snakeCoords.getY()) setImage(up);
         setLocation(snakeCoords.getX(), snakeCoords.getY());
-
     }
 
     /**

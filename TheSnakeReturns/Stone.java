@@ -6,6 +6,6 @@ public class Stone extends Obstacle
      * Instantiates a new stone.
      */
     public Stone(){
-        super("stone.png");
+        super("obstacle/stone.png");
     }  
 }

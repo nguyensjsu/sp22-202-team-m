@@ -21,8 +21,7 @@ public interface ILevelSubject
      
      /**
       * Notify observers.
-      * @param speed the speed
       */
-     public void notifyObservers(int speed);
+     public void notifyObservers();
 }
 

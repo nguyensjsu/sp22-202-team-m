@@ -1,6 +1,6 @@
 import greenfoot.Greenfoot;
 import greenfoot.World;
-
+import greenfoot.GreenfootImage;
 /**
  * Write a description of class SnakeWorld here.
  *
@@ -14,6 +14,9 @@ public class SnakeWorld extends World implements ILevelObserver {
     private int snakeSize = 4;
     private final Point[] snakeCoords = new Point[MAX_DOTS];
     int dX = 1, dY = 0;
+
+    // backgrounds
+    private String[] backgroundPaths = new String[] { "background/grass.jpg", "background/ground.jpg", "background/wood.jpg", "background/bricks.jpg", "background/grass-night.jpg" };
 
     Factory foodFactory;
     Factory obstacleFactory;
@@ -47,6 +50,9 @@ public class SnakeWorld extends World implements ILevelObserver {
     public SnakeWorld() {
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(61, 41, 10);
+        
+        setBackground(new GreenfootImage(backgroundPaths[0]));
+
         setUpCoords();
         drawSnake();
         
@@ -61,6 +67,10 @@ public class SnakeWorld extends World implements ILevelObserver {
 
 
         state = new LevelState();
+
+        // make World observe LevelState
+        state.attach(this);
+
         score = new Score();
         state.changeToLevel1();
         score.attachObserver(state);
@@ -195,7 +205,10 @@ public class SnakeWorld extends World implements ILevelObserver {
      * @param int bodyPosition
      */
     public Point getBodyPosition(int bodyPosition) {
-        return snakeCoords[bodyPosition];
+        if (bodyPosition>=0 && bodyPosition<snakeCoords.length)
+            return snakeCoords[bodyPosition];
+        else
+            return null;
     }
 
     /**
@@ -231,9 +244,9 @@ public class SnakeWorld extends World implements ILevelObserver {
         hitEdge();
     }
 
-    public void update(int speed) {
-        if (score.getScore() == 2)
-            Greenfoot.setSpeed(20);
+    public void update(int speed, int level) {
+        setBackground(new GreenfootImage(backgroundPaths[level-1]));
+        Greenfoot.setSpeed(speed);
     }
 
 }

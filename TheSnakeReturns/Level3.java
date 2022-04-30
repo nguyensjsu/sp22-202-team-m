@@ -14,7 +14,6 @@ public class Level3 implements ILevelState {
      * @param l
      */
     public Level3(LevelState l) {
-        
         this.speed = 40;
         this.l = l;
     }
