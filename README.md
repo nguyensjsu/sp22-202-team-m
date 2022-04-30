@@ -1,8 +1,8 @@
 # Team M
 
-High Level Plannng, Feature Breakdown
+High Level Planing, Feature Breakdown
 
-![alt text]([https://github.com/nguyensjsu/sp22-202-team-m/blob/main/Images/img.png?raw=true)
+![alt text](https://github.com/nguyensjsu/sp22-202-team-m/blob/main/Images/img.png?raw=true)
 
 # Design Patterns
 
