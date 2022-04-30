@@ -14,9 +14,6 @@ public class FoodFactory extends Factory {
     /** The random generator. */
     Random randomGenerator;
     
-
- 
-
     /**
      * Instantiates a new food factory.
      *
@@ -34,20 +31,12 @@ public class FoodFactory extends Factory {
     public Actor getItem() {
 
         randomNumber = randomGenerator.nextInt(10);
-
-        
-        
+       
         switch(randomNumber % 2){
                 case 0: return new Apple();
                 
-               default: return new Banana();
-                
-             
-          
-          
-          }
-
-        
-        
+               default: return new Banana();           
+                     
+          }     
     }
 }

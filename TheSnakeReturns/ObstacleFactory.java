@@ -14,9 +14,6 @@ public class ObstacleFactory extends Factory
     /** The random generator. */
     Random randomGenerator;
     
-
- 
-
     /**
      * Instantiates a new food factory.
      *
@@ -34,16 +31,10 @@ public class ObstacleFactory extends Factory
     public Actor getItem() {
 
         randomNumber = randomGenerator.nextInt(10);
-
-        
-        
+              
         switch(randomNumber % 2){
                 case 0: return new Stone();
-                
                default: return new Fire();
-             
-          
-          
           }
         }
 

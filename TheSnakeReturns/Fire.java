@@ -9,10 +9,6 @@ import greenfoot.*;
  */
 public class Fire extends Obstacle
 {
-    
-
-  
-    
     /**
      * Instantiates a new apple.
      */

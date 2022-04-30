@@ -9,10 +9,6 @@ import greenfoot.*;
  */
 public class Stone extends Obstacle
 {
-    
-
-  
-    
     /**
      * Instantiates a new apple.
      */
