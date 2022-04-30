@@ -2,18 +2,12 @@ import greenfoot.Actor;
 import greenfoot.Color;
 import greenfoot.GreenfootImage;
 
-/**
- * Write a description of class Food here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
 public class Obstacle extends Actor
 {
 
     /**
-     * Constructor Food
-     * Sets the image for the food class
+     * Constructor Obstacle
+     * Sets the image for the obstacle class
      */
     public Obstacle(String name)
     {        
