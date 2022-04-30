@@ -18,7 +18,7 @@ public class Food  extends Actor
     public Food(String name)
     {
         GreenfootImage image = new GreenfootImage(name);
-        image.scale(20, 20);
+        image.scale(30, 30);
         setImage(image);
     }
     
