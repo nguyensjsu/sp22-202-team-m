@@ -2,7 +2,7 @@ import greenfoot.*;
 
 // TODO: Auto-generated Javadoc
 /**
- * Write a description of class Apple here.
+ * Write a description of class Banana here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
@@ -17,14 +17,13 @@ public class Banana extends Food
      * Instantiates a new banana.
      */
     public Banana(){
-        GreenfootImage image = new GreenfootImage(10, 10);
-        image.setColor(Color.YELLOW);
-        image.fillRect(0, 0, 10, 10);
+        GreenfootImage image = new GreenfootImage("banana.png");
+        image.scale(20, 20);
         setImage(image);  
     }
     
     /**
-     * Act - do whatever the Apple wants to do. This method is called whenever
+     * Act - do whatever the Banana wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 

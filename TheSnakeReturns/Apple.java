@@ -17,9 +17,8 @@ public class Apple extends Food
      * Instantiates a new apple.
      */
     public Apple(){
-        GreenfootImage image = new GreenfootImage(10, 10);
-        image.setColor(Color.BLUE);
-        image.fillRect(0, 0, 10, 10);
+        GreenfootImage image = new GreenfootImage("apple.png");
+        image.scale(20, 20);
         setImage(image);
     }
     

@@ -17,10 +17,10 @@ public class Food  extends Actor
      */
     public Food()
     {
-        GreenfootImage image = new GreenfootImage(10, 10);
+      /*  GreenfootImage image = new GreenfootImage(10, 10);
         image.setColor(Color.GREEN);
         image.fillRect(0, 0, 10, 10);
-        setImage(image);
+        setImage(image);*/
     }
 
 }
