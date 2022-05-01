@@ -24,3 +24,21 @@ What am I planning to work on next?
 
 What tasks are blocked waiting on another team member?
 - none
+
+
+### Week 3
+
+What tasks did I work on / complete?
+- exploring how factory pattern could be used to create objects in Snake world
+- created food factory to create food objects at runtime like apple & bananas
+- created obstacle factory to create obstacle objects at runtime like fire and stone
+- refactored and optimized the original boiler plate code
+- added class diagrams for 3 major design patterns used in the project implementation  - state, observer & factory pattern
+- updated the README.md 
+
+What am I planning to work on next?
+- Work on project documentation, high level diagrams 
+- Work on project demo and user story tasks
+
+What tasks are blocked waiting on another team member?
+None
