@@ -12,6 +12,8 @@
 * [Thinh's Journal](https://github.com/nguyensjsu/sp22-202-team-m/blob/main/Journals/ThinhLu.md)
 * [Ankita's Journal](https://github.com/nguyensjsu/sp22-202-team-m/blob/main/Journals/AnkitaJaswal.md)
 
+## Project Topic - The Snake Returns
+This is a greenfoot project based off of the retro nokia snake game with improved features implemented using design patterns.
 
 ### High Level Planing, Feature Breakdown
 
