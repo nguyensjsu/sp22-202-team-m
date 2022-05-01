@@ -37,8 +37,8 @@ What tasks did I work on / complete?
 - updated the README.md 
 
 What am I planning to work on next?
-- Work on project documentation, high level diagrams 
-- Work on project demo and user story tasks
+- work on project documentation, high level diagrams 
+- work on project demo and user story tasks
 
 What tasks are blocked waiting on another team member?
-None
+- none
