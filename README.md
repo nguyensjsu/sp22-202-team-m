@@ -1,6 +1,19 @@
 # Team M
 
-High Level Planing, Feature Breakdown
+## Team Members
+    * Maitreyi
+    * Trupti
+    * Thinh
+    * Ankita
+
+## Team Journals
+* [Maitreyi's Journal](https://github.com/nguyensjsu/sp22-202-team-m/blob/main/Journals/MaitreyiKunnavakkamVinjimur.md)
+* [Trupti's Journal](https://github.com/nguyensjsu/sp22-202-team-m/blob/main/Journals/TruptiLokhande.md)
+* [Thinh's Journal](https://github.com/nguyensjsu/sp22-202-team-m/blob/main/Journals/ThinhLu.md)
+* [Ankita's Journal](https://github.com/nguyensjsu/sp22-202-team-m/blob/main/Journals/AnkitaJaswal.md)
+
+
+### High Level Planing, Feature Breakdown
 
 ![alt text](https://github.com/nguyensjsu/sp22-202-team-m/blob/main/Images/img.png?raw=true)
 
