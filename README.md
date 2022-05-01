@@ -15,9 +15,24 @@
 ## Project Topic - The Snake Returns
 This is a greenfoot project based off of the retro nokia snake game with improved features implemented using design patterns.
 
-### High Level Planing, Feature Breakdown
+### High Level Planning, Feature Breakdown
 
 ![alt text](https://github.com/nguyensjsu/sp22-202-team-m/blob/main/Images/img.png?raw=true)
+
+## Features and Contributions
+
+* Ankita - using State and Observer Pattern:
+  * Five levels with increasing speed for each level.
+  * Display of current score, level, game over, and you win.
+* Thinh - using Observer Pattern:
+  * Different Background for each one of the levels.
+  * Snake Body and Snake Head Image Rendering.
+* Trupti - using Factory Pattern:
+  * Food for snake to eat.
+  * Obstacles to avoid for each one of the levels.
+* Maitreyi:
+  * Sound effects when snake eats Food and when snake hits any of the obstacles.
+
 
 ## Design Patterns
 
@@ -40,5 +55,7 @@ This is a greenfoot project based off of the retro nokia snake game with improve
 *Observer Pattern*
 
 1. Implemented observer pattern in `Score` which acts as the Subject and notifies its observer, `LevelState` of current score.
-2. Implemented observer pattern in `LevelState` which acts as the Subject and notifies its observer, `SnakeWorld` of current changed level. 
+2. Implemented observer pattern in `LevelState` which acts as the Subject and notifies its observer, `SnakeWorld` of current level changes. 
+
 ![alt text](https://github.com/nguyensjsu/sp22-202-team-m/blob/main/Images/ClassDiagram_ObserverDesignPattern.png?raw=true)
+
