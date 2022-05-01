@@ -27,3 +27,16 @@
    1. Add additional observers, if time allotted to the states, time constraint
 4. Communication
    * The team and I are able to collaborate on weekly tasks via stand-up meetings and whatsapp to stay on track in completing the feature set. 
+
+### Week 3
+1. What tasks did I work on / complete?
+   1. Researched Video Editing tools
+   2. Created a Demo for User Story video
+   
+
+2. What am I planning to work on next?
+   1. Continue working on User story video
+   2. Documentation and UML Diagrams
+
+3. What tasks are blocked waiting on another team member?
+   1. None
