@@ -29,7 +29,7 @@ What tasks are blocked waiting on another team member?
 ### Week 3
 
 What tasks did I work on / complete?
-- exploring how factory pattern could be used to create objects in Snake world
+- brainstormed how factory pattern could be used to create objects in Snake world
 - created food factory to create food objects at runtime like apple & bananas
 - created obstacle factory to create obstacle objects at runtime like fire and stone
 - refactored and optimized the original boiler plate code
