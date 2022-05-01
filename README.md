@@ -17,7 +17,7 @@
 
 ![alt text](https://github.com/nguyensjsu/sp22-202-team-m/blob/main/Images/img.png?raw=true)
 
-# Design Patterns
+## Design Patterns
 
 *Factory Pattern*
 
@@ -30,8 +30,13 @@
 
 *State Pattern*
 
+1. Implemented state pattern in `LevelState` which is a level state machine to help transition from the current level to the next level. 
+2. Up to 5 levels are created, each having a separate class, for the game design with the current level being displayed on screen.
+
 ![alt text](https://github.com/nguyensjsu/sp22-202-team-m/blob/main/Images/ClassDiagram_StateDesignPattern.png?raw=true)
 
 *Observer Pattern*
 
+1. Implemented observer pattern in `Score` which acts as the Subject and notifies its observer, `LevelState` of current score.
+2. Implemented observer pattern in `LevelState` which acts as the Subject and notifies its observer, `SnakeWorld` of current changed level. 
 ![alt text](https://github.com/nguyensjsu/sp22-202-team-m/blob/main/Images/ClassDiagram_ObserverDesignPattern.png?raw=true)
