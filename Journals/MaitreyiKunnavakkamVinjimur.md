@@ -24,3 +24,16 @@ What am I planning to work on next?
 
 What tasks are blocked waiting on another team member?
 - None
+
+### Week 3
+
+What tasks did I work on / complete?
+- Add obstacles to make the snake die based on level
+
+What am I planning to work on next?
+- Manipulate life based on obstacles
+- Add achievements based on score 
+
+What tasks are blocked waiting on another team member?
+- None
+
