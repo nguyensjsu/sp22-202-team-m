@@ -102,23 +102,18 @@ public class SnakeHead  extends Actor {
     }
 
     public void hitObstacle() {
+        SnakeWorld world = (SnakeWorld) getWorld();
+        if(!isAlive()) {
+            world.die();
+        }
         if (canSee(Obstacle.class)) {
             obstacleCount++;
-            SnakeWorld world = (SnakeWorld) getWorld();
 //            notifyLifeObserver();
             if(obstacleCount == 3) {
                 world.updateLife();
                 obstacleCount = 0;
             }
         }
-
-//        if(!isAlive()) {
-//            System.out.println("Live not"+ isAlive());
-//            world.die();
-//        }
-//        else {
-//            System.out.println("Live"+ isAlive());
-//        }
     }
 
     /**
@@ -145,7 +140,8 @@ public class SnakeHead  extends Actor {
         }
     }
 
-//    public boolean isAlive() {
-//        return life.getLife() > 0;
-//    }
+    public boolean isAlive() {
+        SnakeWorld world = (SnakeWorld) getWorld();
+        return world.life.getLife() > 0;
+    }
 }
