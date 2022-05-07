@@ -108,8 +108,7 @@ public class SnakeHead  extends Actor {
         }
         if (canSee(Obstacle.class)) {
             obstacleCount++;
-            //TODO: do not hardcode this
-            if(obstacleCount == 3) {
+            if(obstacleCount == Obstacle.getSize()) {
                 world.notifyLifeObserver();
                 obstacleCount = 0;
             }
