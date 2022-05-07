@@ -64,7 +64,8 @@ public class SnakeWorld extends World implements ILevelObserver {
         placeObstacles(1);
         addObject(new WorldOutline(), 30, 20);
         Greenfoot.setSpeed(speed);
-        addObject(new Life(), 16, 2);
+        life = new Life();
+        addObject(life, 16, 2);
         state = new LevelState();
 
         // make World observe LevelState
@@ -247,6 +248,11 @@ public class SnakeWorld extends World implements ILevelObserver {
         setBackground(new GreenfootImage(backgroundPaths[level-1]));
         Greenfoot.setSpeed(speed);
     }
+
+    public void updateLife() {
+        this.life.updateLife();
+    }
+
 //
 //    @Override
 //    public void updateLife(int life) {

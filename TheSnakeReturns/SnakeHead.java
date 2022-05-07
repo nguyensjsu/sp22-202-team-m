@@ -1,5 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
+import java.util.ArrayList;
+
 /**
  * Write a description of class SnakeHead here.
 //  *
@@ -10,11 +12,14 @@ public class SnakeHead  extends Actor {
 //    private int bodyPos;
 //    private int temp = 0;
 
-    private GreenfootImage up;
-    private GreenfootImage down;
-    private GreenfootImage left;
-    private GreenfootImage right;
-
+    private final GreenfootImage up;
+    private final GreenfootImage down;
+    private final GreenfootImage left;
+    private final GreenfootImage right;
+    SnakeWorld world;
+    Life life;
+    ArrayList<ILifeObserver> lifeObservers;
+    int obstacleCount = 0;
     /**
      * SnakeHead Constructor
      * Sets the image for snakeHead
@@ -31,8 +36,10 @@ public class SnakeHead  extends Actor {
         down.scale(20,20);
         left.scale(20,20);
         right.scale(20,20);
-
+//        life = new Life();
+//        this.attachObserver(life);
         setImage(right);
+        world = (SnakeWorld) getWorld();
     }
 
     /**
@@ -95,12 +102,23 @@ public class SnakeHead  extends Actor {
     }
 
     public void hitObstacle() {
-        SnakeWorld world = (SnakeWorld) getWorld();
         if (canSee(Obstacle.class)) {
+            obstacleCount++;
             SnakeWorld world = (SnakeWorld) getWorld();
-//            updateLife(world.getLife() - 1);
-//            world.die();
+//            notifyLifeObserver();
+            if(obstacleCount == 3) {
+                world.updateLife();
+                obstacleCount = 0;
+            }
         }
+
+//        if(!isAlive()) {
+//            System.out.println("Live not"+ isAlive());
+//            world.die();
+//        }
+//        else {
+//            System.out.println("Live"+ isAlive());
+//        }
     }
 
     /**
@@ -126,4 +144,8 @@ public class SnakeHead  extends Actor {
             getWorld().removeObject(actor);
         }
     }
+
+//    public boolean isAlive() {
+//        return life.getLife() > 0;
+//    }
 }
