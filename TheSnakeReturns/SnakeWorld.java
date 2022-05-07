@@ -2,6 +2,7 @@ import greenfoot.Greenfoot;
 import greenfoot.GreenfootImage;
 import greenfoot.World;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -68,6 +69,7 @@ public class SnakeWorld extends World implements ILevelObserver, ILifeSubject {
         placeObstacles(1);
         addObject(new WorldOutline(), 30, 20);
         Greenfoot.setSpeed(speed);
+        lifeObs = new ArrayList<>();
         life = new Life();
         this.attachObserver(life);
 
