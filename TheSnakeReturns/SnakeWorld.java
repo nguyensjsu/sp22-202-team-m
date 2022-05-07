@@ -1,13 +1,16 @@
 import greenfoot.Greenfoot;
-import greenfoot.World;
 import greenfoot.GreenfootImage;
+import greenfoot.World;
+
+import java.util.List;
+
 /**
  * Write a description of class SnakeWorld here.
  *
  * @author (your name)
  * @version (a version number or a date)
  */
-public class SnakeWorld extends World implements ILevelObserver {
+public class SnakeWorld extends World implements ILevelObserver, ILifeSubject {
     //food creation variables
     public static final int DOT_SIZE = 10;
     public static final int MAX_DOTS = (200 * 100) / (DOT_SIZE * DOT_SIZE);
@@ -33,6 +36,7 @@ public class SnakeWorld extends World implements ILevelObserver {
 
     //Endgame variable
     EndGame endgame;
+    List<ILifeObserver> lifeObs;
     Life life;
     //intial speed variable
     private int speed = 30;
@@ -65,6 +69,8 @@ public class SnakeWorld extends World implements ILevelObserver {
         addObject(new WorldOutline(), 30, 20);
         Greenfoot.setSpeed(speed);
         life = new Life();
+        this.attachObserver(life);
+
         addObject(life, 16, 2);
         state = new LevelState();
 
@@ -253,14 +259,20 @@ public class SnakeWorld extends World implements ILevelObserver {
         this.life.updateLife();
     }
 
-//
-//    @Override
-//    public void updateLife(int life) {
-//        String text = "Life: " + life;
-//        GreenfootImage textImage = new GreenfootImage(text, 20, Color.GREEN, new Color(0, 0, 0, 0));
-//        GreenfootImage image = new GreenfootImage(800, 60);
-//        image.drawImage(textImage, 750, 16);
-//        setImage(image);
-//    }
+    @Override
+    public void attachObserver(ILifeObserver observer) {
+        lifeObs.add(observer);
+    }
 
+    @Override
+    public void removeObserver(ILifeObserver obj) {
+        lifeObs.remove(obj);
+    }
+
+    @Override
+    public void notifyLifeObserver() {
+        for (ILifeObserver obs: lifeObs) {
+            obs.updateLife();
+        }
+    }
 }

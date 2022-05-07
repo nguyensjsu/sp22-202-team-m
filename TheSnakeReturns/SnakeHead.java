@@ -108,9 +108,9 @@ public class SnakeHead  extends Actor {
         }
         if (canSee(Obstacle.class)) {
             obstacleCount++;
-//            notifyLifeObserver();
+            //TODO: do not hardcode this
             if(obstacleCount == 3) {
-                world.updateLife();
+                world.notifyLifeObserver();
                 obstacleCount = 0;
             }
         }
