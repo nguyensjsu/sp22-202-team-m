@@ -6,14 +6,14 @@ import greenfoot.Color;
 
 public class EndGame extends Actor
 {
-    
+
     //(font type,bold,italic,size)
     Font font = new Font("Dialog",true,false,40);
     Color darkGreen = new Color(0, 51, 0);
     Color green = new Color(0, 255, 0 , 150);
-    
+
     public void setText(){
-        
+
     GreenfootImage image = new GreenfootImage(300, 100);
         image.setFont(font);
         image.setColor(darkGreen);
@@ -21,24 +21,16 @@ public class EndGame extends Actor
         image.setColor(green);
         image.drawString("You Win", 1, 50);
         setImage(image);
-        
-       /*
-       String text = "You Win";
-        GreenfootImage textImage = new GreenfootImage(text, 20, Color.GREEN, new Color(0, 0, 0, 0));
-        GreenfootImage image = new GreenfootImage(1200, 60);
-        image.drawImage(textImage, 750, 16);
-        setImage(image);
-        */
     }
 
-    
+
     public EndGame()
     {
         setText();
-        
+
     }
-    
-    
+
+
     /**
      * ShiftSouth -shifts the coordnates down by the distance handed to it
      * @param int p

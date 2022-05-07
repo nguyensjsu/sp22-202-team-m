@@ -9,7 +9,7 @@ public class Score extends Actor implements IScoreSubject {
     private int score = 0;
     private IScoreObserver observer;
     private String level = "Level : 1";
-    
+
     /**
      * Set score and level text.
      */
@@ -27,14 +27,14 @@ public class Score extends Actor implements IScoreSubject {
     public Score() {
         setText();
     }
-    
+
     /**
      * returns updated score value
      */
     public int getScore(){
-        return score;    
+        return score;
     }
-    
+
     /**
      * Act.
      */
@@ -44,20 +44,20 @@ public class Score extends Actor implements IScoreSubject {
 
     /**
      * Updates score then sets text to display
-     * 
+     *
      * @param level ->level class name
      */
     public void updateScore(String level) {
         score++;
-        
+
         StringBuilder temp = new StringBuilder(level);
         temp.insert(temp.length()-1, " : ");
         temp.append(" ");
         this.level = temp.toString();
-        
-        
+
+
         setText();
-        
+
         if (score%5==0) {
             notifyLevelState();
         }
@@ -73,7 +73,7 @@ public class Score extends Actor implements IScoreSubject {
         this.observer = obj;
 
     }
-    
+
     /**
      * remove observer.
      *
@@ -82,7 +82,7 @@ public class Score extends Actor implements IScoreSubject {
     public void removeObserver( IScoreObserver obj ){
         this.observer = null;
     }
-    
+
     /**
      * Notify Level State.
      * notifies observers of current score to change level state

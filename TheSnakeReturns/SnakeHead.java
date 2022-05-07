@@ -26,12 +26,12 @@ public class SnakeHead  extends Actor {
         down = new GreenfootImage("snake/head_down.png");
         left = new GreenfootImage("snake/head_left.png");
         right = new GreenfootImage("snake/head_right.png");
-        
+
         up.scale(20,20);
         down.scale(20,20);
         left.scale(20,20);
         right.scale(20,20);
-        
+
         setImage(right);
     }
 
@@ -97,7 +97,9 @@ public class SnakeHead  extends Actor {
     public void hitObstacle() {
         SnakeWorld world = (SnakeWorld) getWorld();
         if (canSee(Obstacle.class)) {
-            world.die();
+            SnakeWorld world = (SnakeWorld) getWorld();
+//            updateLife(world.getLife() - 1);
+//            world.die();
         }
     }
 

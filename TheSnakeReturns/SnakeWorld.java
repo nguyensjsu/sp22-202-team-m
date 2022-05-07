@@ -33,7 +33,7 @@ public class SnakeWorld extends World implements ILevelObserver {
 
     //Endgame variable
     EndGame endgame;
-
+    Life life;
     //intial speed variable
     private int speed = 30;
 
@@ -50,22 +50,21 @@ public class SnakeWorld extends World implements ILevelObserver {
     public SnakeWorld() {
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(61, 41, 10);
-        
+
         setBackground(new GreenfootImage(backgroundPaths[0]));
 
         setUpCoords();
         drawSnake();
-        
+
         foodFactory = new FoodFactory();
         obstacleFactory = new ObstacleFactory();
         placeFood(1);
 
-        
+
         placeObstacles(1);
         addObject(new WorldOutline(), 30, 20);
         Greenfoot.setSpeed(speed);
-
-
+        addObject(new Life(), 16, 2);
         state = new LevelState();
 
         // make World observe LevelState
@@ -248,5 +247,14 @@ public class SnakeWorld extends World implements ILevelObserver {
         setBackground(new GreenfootImage(backgroundPaths[level-1]));
         Greenfoot.setSpeed(speed);
     }
+//
+//    @Override
+//    public void updateLife(int life) {
+//        String text = "Life: " + life;
+//        GreenfootImage textImage = new GreenfootImage(text, 20, Color.GREEN, new Color(0, 0, 0, 0));
+//        GreenfootImage image = new GreenfootImage(800, 60);
+//        image.drawImage(textImage, 750, 16);
+//        setImage(image);
+//    }
 
 }
