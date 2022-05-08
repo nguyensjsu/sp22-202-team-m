@@ -50,4 +50,4 @@ What am I planning to work on next?
 What tasks are blocked waiting on another team member?
 - None
 
-Scrum Values: Communication, openly ask for help and resolve. Especially on Sat in person class.
+Scrum Values: Communication, openly ask for help and resolve. Especially on Sat in person class. And used Miro for virtual planning and brainstorming. 
