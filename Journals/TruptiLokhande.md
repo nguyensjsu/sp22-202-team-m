@@ -56,4 +56,3 @@ What am I planning to work on next?
 
 What tasks are blocked waiting on another team member?
 - none
-- 
