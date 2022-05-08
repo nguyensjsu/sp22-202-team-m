@@ -19,7 +19,7 @@ public class SnakeHead  extends Actor {
     SnakeWorld world;
     Life life;
     ArrayList<ILifeObserver> lifeObservers;
-    int obstacleCount = 0;
+    boolean obstacleExists = false;
     /**
      * SnakeHead Constructor
      * Sets the image for snakeHead
@@ -106,12 +106,13 @@ public class SnakeHead  extends Actor {
         if(!isAlive()) {
             world.die();
         }
-        if (canSee(Obstacle.class)) {
-            obstacleCount++;
-            if(obstacleCount == Obstacle.getSize()) {
-                world.notifyLifeObserver();
-                obstacleCount = 0;
-            }
+        if (canSee(Obstacle.class) && !obstacleExists) {
+            obstacleExists = true;
+            world.notifyLifeObserver();
+        } else if(canSee(Obstacle.class) && obstacleExists) {
+            // do no
+        } else {
+            obstacleExists = false;
         }
     }
 

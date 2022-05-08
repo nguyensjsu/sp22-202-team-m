@@ -39,6 +39,7 @@ public class SnakeWorld extends World implements ILevelObserver, ILifeSubject {
     EndGame endgame;
     List<ILifeObserver> lifeObs;
     Life life;
+
     //intial speed variable
     private int speed = 30;
 
@@ -63,6 +64,7 @@ public class SnakeWorld extends World implements ILevelObserver, ILifeSubject {
 
         foodFactory = new FoodFactory();
         obstacleFactory = new ObstacleFactory();
+
         placeFood(1);
 
 
@@ -224,8 +226,7 @@ public class SnakeWorld extends World implements ILevelObserver, ILifeSubject {
      */
     public void die() {
         Greenfoot.playSound("GameOver.wav");
-        addObject(new GameOver(), getWidth() / 2, getHeight() / 2);
-        Greenfoot.stop();
+        Greenfoot.setWorld(new GameOverWorld(score.getScore()));
     }
 
     /**

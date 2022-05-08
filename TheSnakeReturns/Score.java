@@ -6,9 +6,9 @@ import greenfoot.*;
  */
 public class Score extends Actor implements IScoreSubject {
 
-    private int score = 0;
+    private int score;
     private IScoreObserver observer;
-    private String level = "Level : 1";
+    private String level;
 
     /**
      * Set score and level text.
@@ -25,6 +25,8 @@ public class Score extends Actor implements IScoreSubject {
      * Instantiates a new updated text display.
      */
     public Score() {
+        this.score = 0;
+        this.level = "Level : 1";
         setText();
     }
 
