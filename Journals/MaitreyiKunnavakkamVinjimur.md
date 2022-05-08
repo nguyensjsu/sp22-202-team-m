@@ -37,3 +37,17 @@ What am I planning to work on next?
 What tasks are blocked waiting on another team member?
 - None
 
+
+### Week 4
+
+What tasks did I work on / complete?
+- Add score board 
+- Save top score to file and display on scoreboard
+- Decrement life on hitting a obstacle and direct to gameover on reaching zero
+
+What am I planning to work on next?
+-None
+What tasks are blocked waiting on another team member?
+- None
+
+Scrum Values: Communication, openly ask for help and resolve. Especially on Sat in person class. And used Miro for virtual planning and brainstorming. 
