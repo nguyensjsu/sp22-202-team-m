@@ -40,3 +40,17 @@
 
 3. What tasks are blocked waiting on another team member?
    1. None
+
+### Week 4
+1. What tasks did I work on / complete?
+   1. Researched voice effect tools
+   2. Finished editing User Story Video
+
+2. What am I planning to work on next?
+   1. Wireframes
+   2. Documentation
+
+3. What tasks are blocked waiting on another team member?
+   1. None
+4. Communication
+   * The team and I were able to collaborate on weekly tasks via stand-up meetings, keeping track of work done through the board and burndown chart. We were also able to pair program to solve bugs and issues in person during Saturday after class.
