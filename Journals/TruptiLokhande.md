@@ -42,3 +42,17 @@ What am I planning to work on next?
 
 What tasks are blocked waiting on another team member?
 - none
+
+
+### Week 3
+
+What tasks did I work on / complete?
+- design architecture & deployment diagram
+- help in formulating user story
+
+What am I planning to work on next?
+- Complete the project diagrams
+- Coordinate with teammmates for demo 
+
+What tasks are blocked waiting on another team member?
+- none
