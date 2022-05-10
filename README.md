@@ -32,13 +32,20 @@ This is a greenfoot project based off of the retro nokia snake game with improve
   * Different Background for each one of the levels.
   * Snake Body and Snake Head Image Rendering.
 * Trupti - using Factory Pattern:
-  * Food for snake to eat.
-  * Obstacles to avoid for each one of the levels.
+  * Different types of Food for snake to eat.
+  * Different types of obstacles to avoid for each one of the levels.
 * Maitreyi:
   * Add Obstacles and decrease life on running into it using Observer pattern.
   * Sound effects when snake eats Food and when snake hits any of the obstacles.
   * Add scoreboard on finishing game
 
+## Activity Diagram
+The below diagram shows the high level workflow of the game
+![Activity Diagram](https://github.com/nguyensjsu/sp22-202-team-m/blob/main/Images/HighLevel_ActivityDiagram.png?raw=true)
+
+## Class Diagram
+The below diagram shows the major classes of the game
+![Class Diagram](https://user-images.githubusercontent.com/98665151/167534803-7e2f3154-f960-4fc1-9c31-56577f4a277d.png)
 
 ## Design Patterns
 
@@ -49,24 +56,22 @@ This is a greenfoot project based off of the retro nokia snake game with improve
 3. As the game progresses and levels up, more obstacles and food options could be added by creating more classes implementing the same parent factory classes
 4. In this way a common behaviour could be specified in the factory classes for future derive classes to be created
 
-![alt text](https://github.com/nguyensjsu/sp22-202-team-m/blob/main/Images/ClassDiagram_FactoryDesignPattern.png?raw=true)
+![ClassDiagram_FactoryDesignPattern](https://github.com/nguyensjsu/sp22-202-team-m/blob/main/Images/ClassDiagram_FactoryDesignPattern.png?raw=true)
 
 *State Pattern*
 
 1. Implemented state pattern in `LevelState` which is a level state machine to help transition from the current level to the next level. 
 2. Up to 5 levels are created, each having a separate class, for the game design with the current level being displayed on screen.
 
-![alt text](https://github.com/nguyensjsu/sp22-202-team-m/blob/main/Images/ClassDiagram_StateDesignPattern.png?raw=true)
+![ClassDiagram_StateDesignPattern](https://github.com/nguyensjsu/sp22-202-team-m/blob/main/Images/ClassDiagram_StateDesignPattern.png?raw=true)
 
 *Observer Pattern*
 
 1. Implemented observer pattern in `Score` which acts as the Subject and notifies its observer, `LevelState` of current score.
 2. Implemented observer pattern in `LevelState` which acts as the Subject and notifies its observer, `SnakeWorld` of current level changes. 
 
-![alt text](https://github.com/nguyensjsu/sp22-202-team-m/blob/main/Images/ClassDiagram_ObserverDesignPattern.png?raw=true)
+![ClassDiagram_ObserverDesignPattern](https://github.com/nguyensjsu/sp22-202-team-m/blob/main/Images/ClassDiagram_ObserverDesignPattern.png?raw=true)
 
-*Overall*
-![Class Diagram0](https://user-images.githubusercontent.com/98665151/167534803-7e2f3154-f960-4fc1-9c31-56577f4a277d.png)
 
 
 
