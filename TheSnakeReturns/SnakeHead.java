@@ -1,14 +1,15 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;
 
 import java.util.ArrayList;
 
 /**
  * Write a description of class SnakeHead here.
-//  *
+ * //  *
+ *
  * @author (your name)
  * @version (a version number or a date)
  */
-public class SnakeHead  extends Actor {
+public class SnakeHead extends Actor {
 //    private int bodyPos;
 //    private int temp = 0;
 
@@ -20,6 +21,7 @@ public class SnakeHead  extends Actor {
     Life life;
     ArrayList<ILifeObserver> lifeObservers;
     boolean obstacleExists = false;
+
     /**
      * SnakeHead Constructor
      * Sets the image for snakeHead
@@ -32,10 +34,10 @@ public class SnakeHead  extends Actor {
         left = new GreenfootImage("snake/head_left.png");
         right = new GreenfootImage("snake/head_right.png");
 
-        up.scale(20,20);
-        down.scale(20,20);
-        left.scale(20,20);
-        right.scale(20,20);
+        up.scale(20, 20);
+        down.scale(20, 20);
+        left.scale(20, 20);
+        right.scale(20, 20);
 //        life = new Life();
 //        this.attachObserver(life);
         setImage(right);
@@ -60,7 +62,7 @@ public class SnakeHead  extends Actor {
     public void moveHead() {
         SnakeWorld world = (SnakeWorld) getWorld();
         Point snakeCoords = world.getBodyPosition(0);
-        if      (getX() > snakeCoords.getX()) setImage(left);
+        if (getX() > snakeCoords.getX()) setImage(left);
         else if (getX() < snakeCoords.getX()) setImage(right);
         else if (getY() < snakeCoords.getY()) setImage(down);
         else if (getY() > snakeCoords.getY()) setImage(up);
@@ -103,13 +105,13 @@ public class SnakeHead  extends Actor {
 
     public void hitObstacle() {
         SnakeWorld world = (SnakeWorld) getWorld();
-        if(!isAlive()) {
+        if (!isAlive()) {
             world.die();
         }
         if (canSee(Obstacle.class) && !obstacleExists) {
             obstacleExists = true;
             world.notifyLifeObserver();
-        } else if(canSee(Obstacle.class) && obstacleExists) {
+        } else if (canSee(Obstacle.class) && obstacleExists) {
             // do no
         } else {
             obstacleExists = false;

@@ -4,8 +4,7 @@
  * @author (your name)
  * @version (a version number or a date)
  */
-public interface ILifeSubject
-{
+public interface ILifeSubject {
 
     /**
      * attach observer.
@@ -16,9 +15,10 @@ public interface ILifeSubject
 
     /**
      * Remove Observer
+     *
      * @param obj Pin AUth Observer to Remove
      */
-    void removeObserver( ILifeObserver obj ) ;
+    void removeObserver(ILifeObserver obj);
 
     /**
      * Notify observer.

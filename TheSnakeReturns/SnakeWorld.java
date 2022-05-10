@@ -20,7 +20,7 @@ public class SnakeWorld extends World implements ILevelObserver, ILifeSubject {
     int dX = 1, dY = 0;
 
     // backgrounds
-    private String[] backgroundPaths = new String[] { "background/grass.jpg", "background/ground.jpg", "background/wood.jpg", "background/bricks.jpg", "background/grass-night.jpg" };
+    private String[] backgroundPaths = new String[]{"background/grass.jpg", "background/ground.jpg", "background/wood.jpg", "background/bricks.jpg", "background/grass-night.jpg"};
 
     Factory foodFactory;
     Factory obstacleFactory;
@@ -142,7 +142,7 @@ public class SnakeWorld extends World implements ILevelObserver, ILifeSubject {
      */
     public void placeObstacles(int amountOfObstacles) {
         for (int i = 0; i < amountOfObstacles; i++) {
-            addObject(obstacleFactory.sendItem(), Greenfoot.getRandomNumber(worldWidth - 6) + 3 , Greenfoot.getRandomNumber(worldHeight - 6) + 3);
+            addObject(obstacleFactory.sendItem(), Greenfoot.getRandomNumber(worldWidth - 6) + 3, Greenfoot.getRandomNumber(worldHeight - 6) + 3);
         }
     }
 
@@ -215,7 +215,7 @@ public class SnakeWorld extends World implements ILevelObserver, ILifeSubject {
      * @param int bodyPosition
      */
     public Point getBodyPosition(int bodyPosition) {
-        if (bodyPosition>=0 && bodyPosition<snakeCoords.length)
+        if (bodyPosition >= 0 && bodyPosition < snakeCoords.length)
             return snakeCoords[bodyPosition];
         else
             return null;
@@ -254,7 +254,7 @@ public class SnakeWorld extends World implements ILevelObserver, ILifeSubject {
     }
 
     public void update(int speed, int level) {
-        setBackground(new GreenfootImage(backgroundPaths[level-1]));
+        setBackground(new GreenfootImage(backgroundPaths[level - 1]));
         Greenfoot.setSpeed(speed);
     }
 
@@ -274,7 +274,7 @@ public class SnakeWorld extends World implements ILevelObserver, ILifeSubject {
 
     @Override
     public void notifyLifeObserver() {
-        for (ILifeObserver obs: lifeObs) {
+        for (ILifeObserver obs : lifeObs) {
             obs.updateLife();
         }
     }

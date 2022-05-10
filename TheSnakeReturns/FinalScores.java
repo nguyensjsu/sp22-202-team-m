@@ -1,5 +1,5 @@
 import java.io.*;
-import java.util.*;
+import java.util.ArrayList;
 
 public class FinalScores {
 
@@ -22,7 +22,7 @@ public class FinalScores {
                 BufferedReader br = new BufferedReader(fr);
                 line = br.readLine();
 
-                System.out.println("Liens"+line);
+                System.out.println("Liens" + line);
                 while (line != null) {
                     scores.add(Integer.parseInt(line));
                     line = br.readLine();
@@ -38,7 +38,7 @@ public class FinalScores {
         try {
             FileWriter myWriter = new FileWriter("scores.txt");
             System.out.println("Score in write==" + score);
-            myWriter.write(""+score);
+            myWriter.write("" + score);
             myWriter.close();
         } catch (Exception e) {
             System.out.println(e);

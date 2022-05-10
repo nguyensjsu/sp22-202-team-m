@@ -1,11 +1,10 @@
 /**
  * Write a description of class Point here.
- * 
- * @author (your name) 
+ *
+ * @author (your name)
  * @version (a version number or a date)
  */
-public class Point 
-{
+public class Point {
     // instance variables - replace the example below with your own
     private int x;
     private int y;
@@ -13,35 +12,30 @@ public class Point
     /**
      * Constructor for objects of class Point
      */
-    public Point(int xCoord, int yCoord)
-    {
+    public Point(int xCoord, int yCoord) {
         x = xCoord;
         y = yCoord;
     }
 
     /**
      * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     *
+     * @param y a sample parameter for a method
+     * @return the sum of x and y
      */
-    public int getX()
-    {
+    public int getX() {
         return x;
     }
-    
-    public int getY()
-    {
+
+    public int getY() {
         return y;
     }
-    
-    public void setX(int xCoord)
-    {
-        x=xCoord;
+
+    public void setX(int xCoord) {
+        x = xCoord;
     }
-    
-    public void setY(int yCoord)
-    {
-        y=yCoord;
+
+    public void setY(int yCoord) {
+        y = yCoord;
     }
 }

@@ -33,7 +33,7 @@ public class Score extends Actor implements IScoreSubject {
     /**
      * returns updated score value
      */
-    public int getScore(){
+    public int getScore() {
         return score;
     }
 
@@ -53,14 +53,14 @@ public class Score extends Actor implements IScoreSubject {
         score++;
 
         StringBuilder temp = new StringBuilder(level);
-        temp.insert(temp.length()-1, " : ");
+        temp.insert(temp.length() - 1, " : ");
         temp.append(" ");
         this.level = temp.toString();
 
 
         setText();
 
-        if (score%5==0) {
+        if (score % 5 == 0) {
             notifyLevelState();
         }
     }
@@ -81,7 +81,7 @@ public class Score extends Actor implements IScoreSubject {
      *
      * @param obj
      */
-    public void removeObserver( IScoreObserver obj ){
+    public void removeObserver(IScoreObserver obj) {
         this.observer = null;
     }
 
@@ -91,7 +91,7 @@ public class Score extends Actor implements IScoreSubject {
      */
     @Override
     public void notifyLevelState() {
-        if(this.observer != null){
+        if (this.observer != null) {
             this.observer.changeState(score);
         }
     }

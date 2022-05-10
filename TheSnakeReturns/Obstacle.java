@@ -1,9 +1,7 @@
 import greenfoot.Actor;
-import greenfoot.Color;
 import greenfoot.GreenfootImage;
 
-public class Obstacle extends Actor
-{
+public class Obstacle extends Actor {
 
     /**
      * Constructor Obstacle
@@ -11,14 +9,13 @@ public class Obstacle extends Actor
      */
     private static final int OBSTACLE_SIZE = 30;
 
-    public Obstacle(String name)
-    {
+    public Obstacle(String name) {
         GreenfootImage image = new GreenfootImage(name);
         image.scale(OBSTACLE_SIZE, OBSTACLE_SIZE);
         setImage(image);
     }
 
     public static int getSize() {
-        return OBSTACLE_SIZE/10;
+        return OBSTACLE_SIZE / 10;
     }
 }

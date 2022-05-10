@@ -1,17 +1,22 @@
 import greenfoot.*;
+
 import java.util.Random;
 // TODO: Auto-generated Javadoc
+
 /**
  * A factory for creating Obstacle objects.
  */
-public class ObstacleFactory extends Factory
-{
+public class ObstacleFactory extends Factory {
 
 
-    /** The random number. */
+    /**
+     * The random number.
+     */
     Integer randomNumber = 0;
 
-    /** The random generator. */
+    /**
+     * The random generator.
+     */
     Random randomGenerator;
 
     /**
@@ -19,7 +24,7 @@ public class ObstacleFactory extends Factory
      *
      * @param city the city
      */
-    ObstacleFactory(){
+    ObstacleFactory() {
         randomGenerator = new Random();
     }
 
@@ -32,9 +37,11 @@ public class ObstacleFactory extends Factory
 
         randomNumber = randomGenerator.nextInt(10);
 
-        switch(randomNumber % 2){
-            case 0: return new Stone();
-            default: return new Fire();
+        switch (randomNumber % 2) {
+            case 0:
+                return new Stone();
+            default:
+                return new Fire();
         }
     }
 

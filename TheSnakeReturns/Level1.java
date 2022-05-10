@@ -13,7 +13,7 @@ public class Level1 implements ILevelState {
      * @param l the l
      */
     public Level1(LevelState l) {
-        
+
         this.speed = 30;
         this.l = l;
     }
@@ -26,13 +26,13 @@ public class Level1 implements ILevelState {
 
         l.changeToLevel2();
     }
-    
+
     /**
      * Gets the current speed.
      *
      * @return the level speed
      */
-    public int getSpeed(){
+    public int getSpeed() {
         return speed;
     }
 

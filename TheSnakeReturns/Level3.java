@@ -1,5 +1,3 @@
-import greenfoot.*;
-
 /**
  * The Class Level3 implements Level State to create a new level 3
  */
@@ -24,7 +22,7 @@ public class Level3 implements ILevelState {
     @Override
     public void changeState() {
         l.changeToLevel4();
-        
+
     }
 
     /**
@@ -32,7 +30,7 @@ public class Level3 implements ILevelState {
      *
      * @return the level speed
      */
-    public int getSpeed(){
+    public int getSpeed() {
         return speed;
     }
 }

@@ -1,13 +1,13 @@
 /**
  * Write a description of class Factory here.
- * 
- * @author (your name) 
+ *
+ * @author (your name)
  * @version (a version number or a date)
  */
+
 import greenfoot.Actor;
 
-public abstract class Factory  
-{
+public abstract class Factory {
 
     /**
      * Gets the item.
@@ -15,7 +15,7 @@ public abstract class Factory
      * @return the item
      */
     public abstract Actor getItem();
-    
+
     /**
      * Send item.
      *

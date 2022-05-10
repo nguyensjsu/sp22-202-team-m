@@ -1,5 +1,3 @@
-import greenfoot.*;
-
 /**
  * The Class Level4 implements Level State to create a new level 4
  */
@@ -14,7 +12,7 @@ public class Level4 implements ILevelState {
      * @param l
      */
     public Level4(LevelState l) {
-        
+
         this.speed = 45;
         this.l = l;
     }
@@ -25,7 +23,7 @@ public class Level4 implements ILevelState {
     @Override
     public void changeState() {
         l.changeToLevel5();
-        
+
     }
 
     /**
@@ -33,7 +31,7 @@ public class Level4 implements ILevelState {
      *
      * @return the level speed
      */
-    public int getSpeed(){
+    public int getSpeed() {
         return speed;
     }
 }
