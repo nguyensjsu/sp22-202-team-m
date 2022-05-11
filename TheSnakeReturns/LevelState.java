@@ -47,7 +47,8 @@ public class LevelState implements IScoreObserver, ILevelSubject {
      * @return state name
      */
     public String getState() {
-        return current.getClass().getName();
+        //return current.getClass().getName();
+        return Integer.toString(level);
     }
 
 

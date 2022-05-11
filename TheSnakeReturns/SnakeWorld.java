@@ -72,10 +72,12 @@ public class SnakeWorld extends World implements ILevelObserver, ILifeSubject {
         addObject(new WorldOutline(), 30, 20);
         Greenfoot.setSpeed(speed);
         lifeObs = new ArrayList<>();
-        life = new Life();
+        
+        life = new Life(400, 10);
+        addObject(life, 53, 3); // hard-set position (53,3) for now
         this.attachObserver(life);
 
-        addObject(life, 16, 2);
+        
         state = new LevelState();
 
         // make World observe LevelState
@@ -84,7 +86,7 @@ public class SnakeWorld extends World implements ILevelObserver, ILifeSubject {
         score = new Score();
         state.changeToLevel1();
         score.attachObserver(state);
-        addObject(score, 6, 2);
+        addObject(score, 0, 0);
 
     }
 

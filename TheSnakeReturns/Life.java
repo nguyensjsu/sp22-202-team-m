@@ -8,22 +8,18 @@ import greenfoot.Color;
  * Also used to update text displayed for score and level.
  */
 public class Life extends Actor implements ILifeObserver {
-
+    
     int life = 3;
-    Font font = new Font("Dialog",true,false,40);
-    Color darkGreen = new Color(0, 51, 0);
-    Color green = new Color(0, 255, 0 , 150);
-
+    
+    static private String[] lifeImagePaths = new String[]{"display/life-0.png", "display/life-1.png", "display/life-2.png", "display/life-3.png"};
 
     public void setText() {
-        String text = "Life: " + life;
-        GreenfootImage textImage = new GreenfootImage(text, 20, Color.GREEN, new Color(0, 0, 0, 0));
-        GreenfootImage image = new GreenfootImage(800, 60);
-        image.drawImage(textImage, 750, 16);
+        GreenfootImage image = new GreenfootImage(lifeImagePaths[life]);
+        image.scale(100,30);
         setImage(image);
     }
 
-    public Life() {
+    public Life(int posX, int posY) {
         setText();
     }
 

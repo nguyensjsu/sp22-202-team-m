@@ -14,10 +14,21 @@ public class Score extends Actor implements IScoreSubject {
      * Set score and level text.
      */
     public void setText() {
-        String text = "Score: " + score + " " + level;
-        GreenfootImage textImage = new GreenfootImage(text, 20, Color.GREEN, new Color(0, 0, 0, 0));
-        GreenfootImage image = new GreenfootImage(1600, 60);
-        image.drawImage(textImage, 750, 16);
+        // top-level image
+        GreenfootImage image = new GreenfootImage(400, 200);
+        // level sign
+        GreenfootImage textLevel = new GreenfootImage(level, 24, Color.WHITE, new Color(0, 0, 0, 0));
+        GreenfootImage levelSignImage = new GreenfootImage("display/level_sign.png");
+        levelSignImage.scale(80,80);        
+        levelSignImage.drawImage(textLevel, 35, 40);
+        // score sign
+        GreenfootImage textScore = new GreenfootImage(Integer.toString(score), 24, Color.WHITE, new Color(0, 0, 0, 0));
+        GreenfootImage scoreSignImage = new GreenfootImage("display/score_sign.png");
+        scoreSignImage.scale(80,80);
+        scoreSignImage.drawImage(textScore, (score > 9)? 32 : 35, 36);        
+        // add both signs to top-level image
+        image.drawImage(scoreSignImage, 200, 100);
+        image.drawImage(levelSignImage, 280, 100);        
         setImage(image);
     }
 
@@ -26,7 +37,7 @@ public class Score extends Actor implements IScoreSubject {
      */
     public Score() {
         this.score = 0;
-        this.level = "Level : 1";
+        this.level = "1";
         setText();
     }
 
@@ -51,12 +62,7 @@ public class Score extends Actor implements IScoreSubject {
      */
     public void updateScore(String level) {
         score++;
-
-        StringBuilder temp = new StringBuilder(level);
-        temp.insert(temp.length() - 1, " : ");
-        temp.append(" ");
-        this.level = temp.toString();
-
+        this.level = level;
 
         setText();
 

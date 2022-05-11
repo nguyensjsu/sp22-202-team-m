@@ -28,8 +28,14 @@ public class GameOverWorld extends World
     public GameOverWorld(int score)
     {
         super(61, 41, 10);
-
-        setBackground(new GreenfootImage(backgroundPaths[0]));
+        
+        GreenfootImage background = new GreenfootImage("background/bricks.jpg");        
+        setBackground(background);
+        
+        GreenfootImage boardImage = new GreenfootImage("display/game_sign.png");
+        boardImage.scale(450, 360);
+        getBackground().drawImage(boardImage, 80, 36);
+        
         System.out.println("Score=="+score);
         this.score = score;
 
