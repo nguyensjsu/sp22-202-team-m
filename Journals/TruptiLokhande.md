@@ -12,6 +12,9 @@ What am I planning to work on next?
 What tasks are blocked waiting on another team member?
 - none
 
+ XP Core Value
+ ` Communication : Team co-ordinated on brainstorming the idea and discussing the design of the game both in-person and online video meetings
+
 ### Week 2
 
 What tasks did I work on / complete?
@@ -25,6 +28,9 @@ What am I planning to work on next?
 What tasks are blocked waiting on another team member?
 - none
 
+XP Core Value
+- Feedback : Got feedback on the ongoing development task and possible improvements to it from other team members 
+
 
 ### Week 3
 
@@ -37,22 +43,27 @@ What tasks did I work on / complete?
 - updated the README.md 
 
 What am I planning to work on next?
-- work on project documentation, high level diagrams 
+- work on project documentation, high level diagram
 - work on project demo and user story tasks
 
 What tasks are blocked waiting on another team member?
 - none
 
+XP Core Value
+- Simplicity : Tried to simplify a specific code feature implementation by using design pattern
 
 ### Week 4
 
 What tasks did I work on / complete?
-- design architecture & deployment diagram
+- design high level diagram
 - help in formulating user story
 
 What am I planning to work on next?
-- Complete the project diagrams
+- Complete the project diagram
 - Coordinate with teammmates for demo 
 
 What tasks are blocked waiting on another team member?
 - none
+
+XP Core Value
+- Simplicity : Developed documentation and visual representation of the developed game, simplifying it to end user
