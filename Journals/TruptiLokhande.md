@@ -13,7 +13,7 @@ What tasks are blocked waiting on another team member?
 - none
 
  XP Core Value
- ` Communication : Team co-ordinated on brainstorming the idea and discussing the design of the game both in-person and online video meetings
+ - Communication : Team co-ordinated on brainstorming the idea and discussing the design of the game both in-person and online video meetings
 
 ### Week 2
 
