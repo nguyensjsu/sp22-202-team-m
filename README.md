@@ -105,3 +105,6 @@ Communication - thru visuals ways and excel sheet (Miro board)
 ![burndown](https://github.com/nguyensjsu/sp22-202-team-m/blob/main/Images/BurnDownChart.jpg)
 
 
+## UI Wireframe
+![WhatsApp Image 2022-05-14 at 10 58 35 AM](https://user-images.githubusercontent.com/98665151/168443334-96b5d1dc-0c67-4d8f-aeb9-45859a8c2f2c.jpeg)
+
