@@ -36,6 +36,7 @@ It is our twist on the snake game where
 * Ankita - using State and Observer Pattern:
   * Five levels with increasing speed for each level.
   * Display of current score, level, game over, and you win.
+  * Created User story video
 * Thinh - using Observer Pattern:
   * Different Background for each one of the levels.
   * Snake Body and Snake Head Image Rendering.
@@ -47,6 +48,7 @@ It is our twist on the snake game where
   * Sound effects when snake eats Food and when snake hits any of the obstacles.
   * Persist top scores on disk to compare 
   * Added GameOverWorld(Scoreboard) to show the TopScore and Current Score when hitting obstacles/wall.
+  * Made Demo Video
 
 ## High Level Diagrams
 
