@@ -74,6 +74,6 @@ The below diagram shows the major classes of the game
 
 
 ### XP Core Values
-Communication - thru visuals ways and execl sheet (Miro board)
+Communication - thru visuals ways and excel sheet (Miro board)
 
 
