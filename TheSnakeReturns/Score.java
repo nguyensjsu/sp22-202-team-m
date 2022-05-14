@@ -4,11 +4,12 @@ import greenfoot.*;
  * The Class Score is an Actor and implements ScoreObserver, when score changes, level state machine is notified and level is updated.
  * Also used to update text displayed for score and level.
  */
-public class Score extends Actor implements IScoreSubject {
+public class Score extends Actor implements IScoreSubject, ILevelObserver{
 
     private int score;
+    private int level;
+    
     private IScoreObserver observer;
-    private String level;
 
     /**
      * Set score and level text.
@@ -17,7 +18,7 @@ public class Score extends Actor implements IScoreSubject {
         // top-level image
         GreenfootImage image = new GreenfootImage(400, 200);
         // level sign
-        GreenfootImage textLevel = new GreenfootImage(level, 24, Color.WHITE, new Color(0, 0, 0, 0));
+        GreenfootImage textLevel = new GreenfootImage(Integer.toString(level), 24, Color.WHITE, new Color(0, 0, 0, 0));
         GreenfootImage levelSignImage = new GreenfootImage("display/level_sign.png");
         levelSignImage.scale(80,80);        
         levelSignImage.drawImage(textLevel, 35, 40);
@@ -37,7 +38,7 @@ public class Score extends Actor implements IScoreSubject {
      */
     public Score() {
         this.score = 0;
-        this.level = "1";
+        this.level = 1;
         setText();
     }
 
@@ -61,8 +62,7 @@ public class Score extends Actor implements IScoreSubject {
      * @param level ->level class name
      */
     public void updateScore(String level) {
-        score++;
-        this.level = level;
+        score++;      
 
         setText();
 
@@ -100,5 +100,11 @@ public class Score extends Actor implements IScoreSubject {
         if (this.observer != null) {
             this.observer.changeState(score);
         }
+    }
+    
+    @Override
+    public void update(int speed, int level) {
+        this.level = level;
+        setText();
     }
 }

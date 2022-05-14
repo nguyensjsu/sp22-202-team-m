@@ -46,4 +46,11 @@ public class GameController
         Greenfoot.playSound("GameOver.wav");
         Greenfoot.setWorld(new GameOverWorld(this, score));
     }
+    
+        public void setYouWin(int score)
+    {
+        // put your code here
+        //Greenfoot.playSound("GameOver.wav");
+        Greenfoot.setWorld(new YouWinWorld(this, score));
+    }
 }

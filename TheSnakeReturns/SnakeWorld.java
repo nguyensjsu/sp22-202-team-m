@@ -83,6 +83,7 @@ public class SnakeWorld extends World implements ILevelObserver, ILifeSubject {
         state.attach(this);
 
         score = new Score();
+        state.attach(score);
         state.changeToLevel1();
         score.attachObserver(state);
         addObject(score, 0, 0);
@@ -172,10 +173,10 @@ public class SnakeWorld extends World implements ILevelObserver, ILifeSubject {
         score.updateScore(state.getState());
         value = score.getScore();
         //add new end game instance
-        if (value == 30) {
+        if (value == 20) {
             endGame();
         }
-        System.out.println("Score===" + value);
+        //System.out.println("Score===" + value);
         speed++;
         Greenfoot.setSpeed(speed);
     }
@@ -233,8 +234,9 @@ public class SnakeWorld extends World implements ILevelObserver, ILifeSubject {
      * endGame - ends the game
      */
     public void endGame() {
-        addObject(new EndGame(), getWidth() / 2, getHeight() / 2);
-        Greenfoot.stop();
+        //addObject(new EndGame(), getWidth() / 2, getHeight() / 2);
+        //Greenfoot.stop();
+        controller.setYouWin(score.getScore());
     }
 
 
