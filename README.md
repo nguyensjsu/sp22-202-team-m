@@ -40,7 +40,8 @@ This is a greenfoot project based off of the retro nokia snake game with improve
 * Maitreyi:
   * Add Obstacles and decrease life on running into it using Observer pattern.
   * Sound effects when snake eats Food and when snake hits any of the obstacles.
-  * Add scoreboard on finishing game
+  * Persist top scores on disk to compare 
+  * Added GameOverWorld(Scoreboard) to show the TopScore and Current Score when hitting obstacles/wall.
 
 ## Activity Diagram
 The below diagram shows the high level workflow of the game
