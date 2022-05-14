@@ -76,5 +76,7 @@ The below diagram shows the major classes of the game
 ![ClassDiagram_ObserverDesignPattern](https://github.com/nguyensjsu/sp22-202-team-m/blob/main/Images/ClassDiagram_ObserverDesignPattern.png?raw=true)
 
 
+### XP Core Values
+Communication - thru visuals ways and excel sheet (Miro board)
 
 
