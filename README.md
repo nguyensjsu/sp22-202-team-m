@@ -48,6 +48,8 @@ It is our twist on the snake game where
   * Persist top scores on disk to compare 
   * Added GameOverWorld(Scoreboard) to show the TopScore and Current Score when hitting obstacles/wall.
 
+## High Level Diagrams
+
 ## Activity Diagram
 The below diagram shows the high level workflow of the game
 ![Activity Diagram](https://github.com/nguyensjsu/sp22-202-team-m/blob/main/Images/HighLevel_ActivityDiagram.png?raw=true)
