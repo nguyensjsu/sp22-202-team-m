@@ -14,6 +14,11 @@
 
 ## Project Topic - The Snake Returns
 This is a greenfoot project based off of the retro nokia snake game with improved features implemented using design patterns.
+It is our twist on the snake game where
+1. There are multiple levels as the snake progresses 
+2. Snake score increases by eating food
+3. Obstacles that the snake should avoid, three lives on hitting obstacles and dies after that
+4. Scoreboard to track the Top Score
 
 ## The Snake Returns - Ad
 
