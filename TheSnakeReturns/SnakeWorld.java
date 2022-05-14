@@ -226,7 +226,7 @@ public class SnakeWorld extends World implements ILevelObserver, ILifeSubject {
      * die - ends the game
      */
     public void die() {
-        controller.setGameOver(life.getLife());
+        controller.setGameOver(score.getScore());
     }
 
     /**
