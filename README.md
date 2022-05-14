@@ -14,6 +14,11 @@
 
 ## Project Topic - The Snake Returns
 This is a greenfoot project based off of the retro nokia snake game with improved features implemented using design patterns.
+It is our twist on the snake game where
+1. There are multiple levels as the snake progresses 
+2. Snake score increases by eating food
+3. Obstacles that the snake should avoid, three lives on hitting obstacles and dies after that
+4. Scoreboard to track the Top Score
 
 ## The Snake Returns - Ad
 
@@ -26,11 +31,14 @@ This is a greenfoot project based off of the retro nokia snake game with improve
 
 ## Demo Video - Game Play
 
+https://youtu.be/M-6u8jhStp8
+
 ## Features and Contributions
 
 * Ankita - using State and Observer Pattern:
   * Five levels with increasing speed for each level.
   * Display of current score, level, game over, and you win.
+  * Created User story video
 * Thinh - using Observer Pattern:
   * Different Background for each one of the levels.
   * Snake Body and Snake Head Image Rendering.
@@ -42,6 +50,9 @@ This is a greenfoot project based off of the retro nokia snake game with improve
   * Sound effects when snake eats Food and when snake hits any of the obstacles.
   * Persist top scores on disk to compare 
   * Added GameOverWorld(Scoreboard) to show the TopScore and Current Score when hitting obstacles/wall.
+  * Made Demo Video
+
+## High Level Diagrams
 
 ## Activity Diagram
 The below diagram shows the high level workflow of the game
@@ -49,9 +60,11 @@ The below diagram shows the high level workflow of the game
 
 ## Class Diagram
 The below diagram shows the major classes of the game
-![Class Diagram](https://user-images.githubusercontent.com/98665151/167534803-7e2f3154-f960-4fc1-9c31-56577f4a277d.png)
+![overall](https://user-images.githubusercontent.com/98665151/168442876-e8bd22b6-6786-4fc4-9b98-a03177f26b41.jpg)
 
-## Design Patterns
+
+
+## Design Patterns - Key Features
 
 *Factory Pattern*
 
@@ -76,6 +89,10 @@ The below diagram shows the major classes of the game
 
 ![ClassDiagram_ObserverDesignPattern](https://github.com/nguyensjsu/sp22-202-team-m/blob/main/Images/ClassDiagram_ObserverDesignPattern.png?raw=true)
 
+3. Implemented observer pattern in `SnakeWorld` which acts as the Subject and notifies its observer, `Life` of current level changes. 
+![life obs](https://user-images.githubusercontent.com/98665151/168442696-a8b80785-018e-462d-b234-08d36f1c14de.png)
+
+
 *Command Pattern*
 
 1. Created `Command` interface and `Button` class that uses `Command` to handle button-pressed event.
@@ -91,4 +108,7 @@ Communication - thru visuals ways and excel sheet (Miro board)
 ### BurnDown Chart
 ![burndown](https://github.com/nguyensjsu/sp22-202-team-m/blob/main/Images/BurnDownChart.jpg)
 
+
+## UI Wireframe
+![WhatsApp Image 2022-05-14 at 10 58 35 AM](https://user-images.githubusercontent.com/98665151/168443334-96b5d1dc-0c67-4d8f-aeb9-45859a8c2f2c.jpeg)
 
