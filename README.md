@@ -49,7 +49,8 @@ The below diagram shows the high level workflow of the game
 
 ## Class Diagram
 The below diagram shows the major classes of the game
-![Class Diagram](https://user-images.githubusercontent.com/98665151/167534803-7e2f3154-f960-4fc1-9c31-56577f4a277d.png)
+![HighLevel](https://user-images.githubusercontent.com/98665151/168442850-cabe6a2c-740e-4335-8062-7b9e02a76ee5.png)
+
 
 ## Design Patterns
 
