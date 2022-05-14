@@ -79,4 +79,7 @@ The below diagram shows the major classes of the game
 ### XP Core Values
 Communication - thru visuals ways and excel sheet (Miro board)
 
+### BurnDown Chart
+![burndown](https://github.com/nguyensjsu/sp22-202-team-m/blob/main/Images/BurnDownChart.jpg)
+
 
