@@ -76,6 +76,14 @@ The below diagram shows the major classes of the game
 
 ![ClassDiagram_ObserverDesignPattern](https://github.com/nguyensjsu/sp22-202-team-m/blob/main/Images/ClassDiagram_ObserverDesignPattern.png?raw=true)
 
+*Command Pattern*
+
+1. Created `Command` interface and `Button` class that uses `Command` to handle button-pressed event.
+2. Implemented `AppController` class for handling screen transitions.
+3. Created `StartGameCommand` that implement `Command` interface and uses `AppController` to start new game by transitioning to SnakeWorld Screen.
+
+![ClassDiagram_CommandDesignPattern](https://github.com/nguyensjsu/sp22-202-team-m/blob/main/Images/ClassDiagram_CommandDesignPattern.png?raw=true)
+
 
 ### XP Core Values
 Communication - thru visuals ways and excel sheet (Miro board)
