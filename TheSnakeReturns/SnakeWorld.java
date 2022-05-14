@@ -45,18 +45,18 @@ public class SnakeWorld extends World implements ILevelObserver, ILifeSubject {
 
     //value variable
     private static int value = 0;
-    
+
     private final GameController controller;
 
     /**
      * Constructor for objects of class SnakeWorld.
      */
     public SnakeWorld(GameController controller) {
-        
+
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(controller.SCREEN_WIDTH, controller.SCREEN_HEIGHT, controller.SCREEN_CELLSIZE);        
+        super(controller.SCREEN_WIDTH, controller.SCREEN_HEIGHT, controller.SCREEN_CELLSIZE);
         this.controller = controller;
-        
+
         setBackground(new GreenfootImage(backgroundPaths[0]));
 
         setUpCoords();
@@ -71,12 +71,12 @@ public class SnakeWorld extends World implements ILevelObserver, ILifeSubject {
         placeObstacles(1);
         Greenfoot.setSpeed(speed);
         lifeObs = new ArrayList<>();
-        
+
         life = new Life(400, 10);
         addObject(life, 70, 3); // hard-set position (53,3) for now
         this.attachObserver(life);
 
-        
+
         state = new LevelState();
 
         // make World observe LevelState

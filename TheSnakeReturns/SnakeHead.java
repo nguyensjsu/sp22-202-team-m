@@ -18,8 +18,6 @@ public class SnakeHead extends Actor {
     private final GreenfootImage left;
     private final GreenfootImage right;
     SnakeWorld world;
-    Life life;
-    ArrayList<ILifeObserver> lifeObservers;
     boolean obstacleExists = false;
 
     /**
@@ -38,8 +36,6 @@ public class SnakeHead extends Actor {
         down.scale(20, 20);
         left.scale(20, 20);
         right.scale(20, 20);
-//        life = new Life();
-//        this.attachObserver(life);
         setImage(right);
         world = (SnakeWorld) getWorld();
     }
