@@ -15,7 +15,7 @@ public class Life extends Actor implements ILifeObserver {
 
     public void setText() {
         GreenfootImage image = new GreenfootImage(lifeImagePaths[life]);
-        image.scale(100,30);
+        image.scale(132,36);
         setImage(image);
     }
 

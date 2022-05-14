@@ -45,18 +45,18 @@ public class SnakeWorld extends World implements ILevelObserver, ILifeSubject {
 
     //value variable
     private static int value = 0;
-
-    private int worldWidth = 60;
-
-    private int worldHeight = 40;
+    
+    private final GameController controller;
 
     /**
      * Constructor for objects of class SnakeWorld.
      */
-    public SnakeWorld() {
+    public SnakeWorld(GameController controller) {
+        
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(61, 41, 10);
-
+        super(controller.SCREEN_WIDTH, controller.SCREEN_HEIGHT, controller.SCREEN_CELLSIZE);        
+        this.controller = controller;
+        
         setBackground(new GreenfootImage(backgroundPaths[0]));
 
         setUpCoords();
@@ -69,12 +69,11 @@ public class SnakeWorld extends World implements ILevelObserver, ILifeSubject {
 
 
         placeObstacles(1);
-        addObject(new WorldOutline(), 30, 20);
         Greenfoot.setSpeed(speed);
         lifeObs = new ArrayList<>();
         
         life = new Life(400, 10);
-        addObject(life, 53, 3); // hard-set position (53,3) for now
+        addObject(life, 70, 3); // hard-set position (53,3) for now
         this.attachObserver(life);
 
         
@@ -132,7 +131,7 @@ public class SnakeWorld extends World implements ILevelObserver, ILifeSubject {
      */
     public void placeFood(int amountOfFood) {
         for (int i = 0; i < amountOfFood; i++) {
-            addObject(foodFactory.sendItem(), Greenfoot.getRandomNumber(worldWidth - 6) + 3, Greenfoot.getRandomNumber(worldHeight - 6) + 3);
+            addObject(foodFactory.sendItem(), Greenfoot.getRandomNumber(controller.SCREEN_WIDTH - 6) + 3, Greenfoot.getRandomNumber(controller.SCREEN_HEIGHT - 6) + 3);
         }
     }
 
@@ -144,7 +143,7 @@ public class SnakeWorld extends World implements ILevelObserver, ILifeSubject {
      */
     public void placeObstacles(int amountOfObstacles) {
         for (int i = 0; i < amountOfObstacles; i++) {
-            addObject(obstacleFactory.sendItem(), Greenfoot.getRandomNumber(worldWidth - 6) + 3, Greenfoot.getRandomNumber(worldHeight - 6) + 3);
+            addObject(obstacleFactory.sendItem(), Greenfoot.getRandomNumber(controller.SCREEN_WIDTH - 6) + 3, Greenfoot.getRandomNumber(controller.SCREEN_HEIGHT - 6) + 3);
         }
     }
 
@@ -227,8 +226,7 @@ public class SnakeWorld extends World implements ILevelObserver, ILifeSubject {
      * die - ends the game
      */
     public void die() {
-        Greenfoot.playSound("GameOver.wav");
-        Greenfoot.setWorld(new GameOverWorld(score.getScore()));
+        controller.setGameOver(life.getLife());
     }
 
     /**

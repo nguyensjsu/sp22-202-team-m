@@ -10,7 +10,7 @@ public class Food extends Actor {
      */
     public Food(String name) {
         GreenfootImage image = new GreenfootImage(name);
-        image.scale(30, 30);
+        image.scale(40, 40);
         setImage(image);
     }
 }

@@ -7,7 +7,7 @@ public class Obstacle extends Actor {
      * Constructor Obstacle
      * Sets the image for the obstacle class
      */
-    private static final int OBSTACLE_SIZE = 30;
+    private static final int OBSTACLE_SIZE = 40;
 
     public Obstacle(String name) {
         GreenfootImage image = new GreenfootImage(name);
