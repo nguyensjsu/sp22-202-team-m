@@ -60,7 +60,7 @@ The below diagram shows the major classes of the game
 
 
 
-## Design Patterns
+## Design Patterns - Key Features
 
 *Factory Pattern*
 
