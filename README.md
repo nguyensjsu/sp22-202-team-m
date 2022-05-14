@@ -23,6 +23,9 @@ This is a greenfoot project based off of the retro nokia snake game with improve
 
 ![alt text](https://github.com/nguyensjsu/sp22-202-team-m/blob/main/Images/img.png?raw=true)
 
+
+## Demo Video - Game Play
+
 ## Features and Contributions
 
 * Ankita - using State and Observer Pattern:
