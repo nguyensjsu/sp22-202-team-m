@@ -42,6 +42,8 @@ https://youtu.be/M-6u8jhStp8
 * Thinh - using Observer Pattern:
   * Different Background for each one of the levels.
   * Snake Body and Snake Head Image Rendering.
+  * Adding StartMenuWorld, GameOverWorld, and YouWinWorld
+  * Created GameController to handle the transition between the screens
 * Trupti - using Factory Pattern:
   * Different types of Food for snake to eat.
   * Different types of obstacles to avoid for each one of the levels.
