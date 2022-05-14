@@ -13,6 +13,8 @@ What am I planning to work on next?
 What tasks are blocked waiting on another team member?
 - Pairing with Ankita
 
+**Scrum Values**: Communication - plan, discuss and breakdown features. Estimate/ Scope the requirements
+
 ### Week 2
 
 What tasks did I work on / complete?
@@ -24,6 +26,8 @@ What am I planning to work on next?
 
 What tasks are blocked waiting on another team member?
 - None
+
+**Scrum Values**: Communication, discuss and reevalute our features based 
 
 ### Week 3
 
@@ -37,6 +41,7 @@ What am I planning to work on next?
 What tasks are blocked waiting on another team member?
 - None
 
+**Scrum Values**: Communication, pairing to fix bugs and issues
 
 ### Week 4
 
@@ -50,4 +55,4 @@ What am I planning to work on next?
 What tasks are blocked waiting on another team member?
 - None
 
-Scrum Values: Communication, openly ask for help and resolve. Especially on Sat in person class. And used Miro for virtual planning and brainstorming. 
+**Scrum Values**: Communication, openly ask for help and resolve. Especially on Sat in person class. And used Miro for virtual planning and brainstorming. 
