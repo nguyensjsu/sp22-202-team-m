@@ -47,6 +47,7 @@ https://youtu.be/M-6u8jhStp8
 * Trupti - using Factory Pattern:
   * Different types of Food for snake to eat.
   * Different types of obstacles to avoid for each one of the levels.
+  * Helped in project documentation
 * Maitreyi:
   * Add Obstacles and decrease life on running into it using Observer pattern.
   * Sound effects when snake eats Food and when snake hits any of the obstacles.
