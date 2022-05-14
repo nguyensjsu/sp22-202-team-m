@@ -76,6 +76,10 @@ The below diagram shows the major classes of the game
 
 ![ClassDiagram_ObserverDesignPattern](https://github.com/nguyensjsu/sp22-202-team-m/blob/main/Images/ClassDiagram_ObserverDesignPattern.png?raw=true)
 
+3. Implemented observer pattern in `SnakeWorld` which acts as the Subject and notifies its observer, `Life` of current level changes. 
+![life obs](https://user-images.githubusercontent.com/98665151/168442696-a8b80785-018e-462d-b234-08d36f1c14de.png)
+
+
 *Command Pattern*
 
 1. Created `Command` interface and `Button` class that uses `Command` to handle button-pressed event.
